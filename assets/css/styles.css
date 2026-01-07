@@ -118,8 +118,8 @@
    ===================================================== */
 
 :root {
-  --brand-primary: #1c1f26; /* Charcoal */
-  --brand-accent: #c9a24d; /* Gold */
+  --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
+  --brand-accent: #ffff; /* Gold */
 }
 
 /* Headings & emphasis */
