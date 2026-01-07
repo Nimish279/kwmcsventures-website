@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /private/           # Example of a disallowed directory
+Disallow: /temp/              # Example of a temporary directory
+Disallow: /cgi-bin/           # Commonly used for scripts
+
+# Allow all other content
+Allow: /
+
+# Specify the location of your sitemap
+Sitemap: http://www.kwmcsventures.com/sitemap.xml

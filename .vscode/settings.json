@@ -1,0 +1,8 @@
+{
+    "editor.find.addExtraSpaceOnTop": false,
+    "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.preferredHighContrastColorTheme": "Default Dark+"
+}

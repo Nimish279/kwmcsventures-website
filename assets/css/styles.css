@@ -1,0 +1,218 @@
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-menu {
+    display: block !important;
+    width: 230px;
+  }
+}
+
+.dropdown-menu.show,
+.dropdown:hover > .dropdown-menu,
+.dropdown-submenu:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+/* Dropdown Item Styles */
+.dropdown-item,
+.dropdown-menu .dropdown-item,
+.dropdown-submenu .dropdown-item {
+  text-align: left;
+  font-size: 14px;
+  color: #a4c639;
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Link Styles */
+#hr-services-link {
+  color: #a4c639;
+  text-decoration: none;
+}
+
+#hr-services-link:hover,
+.dropdown-submenu .dropdown-item:hover {
+  color: #a4c639;
+}
+
+/* Submenu List Styles */
+.dropdown-submenu ul {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+/* WhatsApp Button Styles */
+.whatsapp {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.dropdown-item:focus,
+.dropdown-item:active {
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+}
+
+.testimonials .testimonial-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* White background */
+  min-height: 300px; /* Set a minimum height for uniformity */
+  box-sizing: border-box;
+  /* Optional: Add border or shadow for better visual separation */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.testimonials .testimonial-item .inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  /* Optional: Adjust alignment or spacing if needed */
+}
+
+.testimonials .testimonial-item img {
+  margin-top: 10px;
+  border-radius: 50%;
+  max-width: 60px;
+  /* Optional: Add shadow for visual enhancement */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading h1 {
+  font-size: 2em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+/* =====================================================
+   BRAND THEME – EXECUTIVE CHARCOAL
+   ===================================================== */
+
+:root {
+  --brand-primary: #1c1f26; /* Charcoal */
+  --brand-accent: #c9a24d; /* Gold */
+}
+
+/* Headings & emphasis */
+em,
+.section-heading em,
+.count-digit,
+.testimonial-item span {
+  color: var(--brand-accent) !important;
+}
+
+/* Buttons */
+a.filled-button {
+  background-color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+}
+
+a.filled-button:hover {
+  background-color: #ffffff !important;
+  color: var(--brand-primary) !important;
+}
+
+/* Navbar */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.current {
+  color: var(--brand-accent) !important;
+  border-bottom: 3px solid var(--brand-accent) !important;
+}
+
+/* Dropdown items */
+.dropdown-item,
+#hr-services-link {
+  color: var(--brand-primary) !important;
+}
+
+.dropdown-item:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* Sub header & request strip */
+.sub-header,
+.request-form {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Icons hover */
+.sub-header ul.right-icons li a:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* Preloader */
+#preloader {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Section backgrounds */
+.services,
+.testimonials {
+  background-color: #f5f6f8 !important;
+}
+.service-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero slider small heading fix */
+.Modern-Slider .item h6 {
+  color: var(--brand-accent) !important;
+}
+/* =====================================================
+   END OF BRAND THEME – EXECUTIVE CHARCOAL
+   ===================================================== */
+/* =========================================
+   COMPANY NAME (NAVBAR BRAND) COLOR FIX
+   ========================================= */
+
+/* Logo / Company name on hero (dark background) */
+.navbar .navbar-brand,
+.navbar .navbar-brand h2,
+.navbar-brand span {
+  color: var(--brand-accent) !important; /* GOLD */
+}
+
+/* Logo / Company name after scroll (white background) */
+.background-header .navbar-brand,
+.background-header .navbar-brand h2,
+.background-header .navbar-brand span {
+  color: var(--brand-primary) !important; /* CHARCOAL */
+}
+/* =========================================
+   END OF COMPANY NAME (NAVBAR BRAND) COLOR FIX
+   ========================================= */
