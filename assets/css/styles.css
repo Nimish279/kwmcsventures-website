@@ -34,7 +34,7 @@
 .dropdown-submenu .dropdown-item {
   text-align: left;
   font-size: 14px;
-  color: #a4c639;
+  color: rgba(81, 66, 250, 0.902);
   white-space: normal !important;
   word-wrap: break-word !important;
   overflow-wrap: break-word !important;
@@ -44,13 +44,13 @@
 
 /* Link Styles */
 #hr-services-link {
-  color: #a4c639;
+  color: rgba(81, 66, 250, 0.902);
   text-decoration: none;
 }
 
 #hr-services-link:hover,
 .dropdown-submenu .dropdown-item:hover {
-  color: #a4c639;
+  color: rgba(81, 66, 250, 0.902);
 }
 
 /* Submenu List Styles */
@@ -137,7 +137,7 @@ a.filled-button {
 }
 
 a.filled-button:hover {
-  background-color: #ffffff !important;
+  background-color: rgba(81, 66, 250, 0.902) f !important;
   color: var(--brand-primary) !important;
 }
 
@@ -186,7 +186,7 @@ a.filled-button:hover {
 
 .service-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 25px rgba(177, 174, 209, 0.902);
 }
 
 /* Hero slider small heading fix */
@@ -216,3 +216,10 @@ a.filled-button:hover {
 /* =========================================
    END OF COMPANY NAME (NAVBAR BRAND) COLOR FIX
    ========================================= */
+
+@media (min-width: 992px) {
+  .services .row > .col-md-4:last-of-type {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
