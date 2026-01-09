@@ -59,8 +59,8 @@
   font-size: 14px;
 }
 
-/* WhatsApp Button Styles */
-.whatsapp {
+/* p Button Styles */
+.p {
   position: fixed;
   bottom: 40px;
   right: 20px;
@@ -222,4 +222,73 @@ a.filled-button:hover {
     margin-left: auto;
     margin-right: auto;
   }
+}
+/* Chatbot */
+#chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1c1f26;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#chatbot-box {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+#chatbot-header {
+  padding: 10px;
+  background: #1c1f26;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+}
+
+#chatbot-messages {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.bot {
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+#chatbot-actions {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+#chatbot-actions button {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+  border: none;
+  background: #1c1f26;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#chatbot-close {
+  cursor: pointer;
 }
