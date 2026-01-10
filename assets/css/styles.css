@@ -326,4 +326,44 @@ a.filled-button:hover {
   filter: grayscale(0%);
   opacity: 0.75;
 }
+
+/* =========================
+   Page Hero (Reusable)
+========================= */
+
+.page-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.it-hero {
+  background: url("../images/it-hero.png") center center / cover no-repeat;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.page-hero-title {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.page-hero-subtitle {
+  position: relative;
+  z-index: 2;
+  color: #e0e0e0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
 /* End of Our Clients Section */

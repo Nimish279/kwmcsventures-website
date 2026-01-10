@@ -6,6 +6,9 @@ require 'PHPMailer/Exception.php';
 require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
+// We removed the JSON header so we can output HTML/JS script tags instead
+// header('Content-Type: application/json'); 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = trim($_POST["name"]);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
@@ -13,7 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = trim($_POST["message"]);
 
     if (empty($name) || empty($email) || empty($message) || empty($subject) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+        // Javascript Popup for Error
+        echo "<script>
+                alert('Oops! Please complete all fields correctly and try again.');
+                history.back();
+              </script>";
         exit;
     }
 
@@ -30,7 +37,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->setFrom($email, $name);
         $mail->addAddress('kwmcsventuress@gmail.com'); 
+        
         $mail->isHTML(false);
+
+        $mail->Subject = "Website Inquiry: " . $subject; 
+
         $mail->Body    = "Name: $name\n";
         $mail->Body   .= "Email: $email\n\n";
         $mail->Body   .= "Subject: $subject\n\n";
@@ -38,17 +49,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
-        echo "<script>alert('Thank You! Your message has been sent.');</script>";
-        echo "<script>history.back();</script>";
+        // --- SUCCESS POPUP ---
+        // This script runs, shows the alert, and then redirects the user to 'contact.html'
+        echo "<script>
+                alert('Thank You! Your message has been sent successfully.');
+                window.location.href = 'contact.html'; 
+              </script>";
         exit;
+        
     } catch (Exception $e) {
-        echo "Oops! Something went wrong and we couldn't send your message. Error: " . $mail->ErrorInfo;
+        // Javascript Popup for Mailer Error
+        echo "<script>
+                alert('Message could not be sent. Error: " . addslashes($mail->ErrorInfo) . "');
+                history.back();
+              </script>";
         exit;
     }
 } else {
-    
-    echo "There was a problem with your submission, please try again.";
+    echo "<script>
+            alert('There was a problem with your submission, please try again.');
+            history.back();
+          </script>";
     exit;
 }
-
 ?>
