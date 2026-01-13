@@ -367,3 +367,38 @@ a.filled-button:hover {
 
 
 /* End of Our Clients Section */
+
+/* Navbar Careers Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
