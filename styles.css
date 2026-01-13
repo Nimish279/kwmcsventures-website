@@ -1,0 +1,404 @@
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-menu {
+    display: block !important;
+    width: 230px;
+  }
+}
+
+.dropdown-menu.show,
+.dropdown:hover > .dropdown-menu,
+.dropdown-submenu:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+/* Dropdown Item Styles */
+.dropdown-item,
+.dropdown-menu .dropdown-item,
+.dropdown-submenu .dropdown-item {
+  text-align: left;
+  font-size: 14px;
+  color: rgba(81, 66, 250, 0.902);
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Link Styles */
+#hr-services-link {
+  color: rgba(81, 66, 250, 0.902);
+  text-decoration: none;
+}
+
+#hr-services-link:hover,
+.dropdown-submenu .dropdown-item:hover {
+  color: rgba(81, 66, 250, 0.902);
+}
+
+/* Submenu List Styles */
+.dropdown-submenu ul {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+/* p Button Styles */
+.p {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.dropdown-item:focus,
+.dropdown-item:active {
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+}
+
+.testimonials .testimonial-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* White background */
+  min-height: 300px; /* Set a minimum height for uniformity */
+  box-sizing: border-box;
+  /* Optional: Add border or shadow for better visual separation */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.testimonials .testimonial-item .inner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  /* Optional: Adjust alignment or spacing if needed */
+}
+
+.testimonials .testimonial-item img {
+  margin-top: 10px;
+  border-radius: 50%;
+  max-width: 60px;
+  /* Optional: Add shadow for visual enhancement */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading h1 {
+  font-size: 2em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+/* =====================================================
+   BRAND THEME – EXECUTIVE CHARCOAL
+   ===================================================== */
+
+:root {
+  --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
+  --brand-accent: #ffff; /* Gold */
+}
+
+/* Headings & emphasis */
+em,
+.section-heading em,
+.count-digit,
+.testimonial-item span {
+  color: var(--brand-accent) !important;
+}
+
+/* Buttons */
+a.filled-button {
+  background-color: var(--brand-primary) !important;
+  border-color: var(--brand-primary) !important;
+}
+
+a.filled-button:hover {
+  background-color: rgba(81, 66, 250, 0.902) f !important;
+  color: var(--brand-primary) !important;
+}
+
+/* Navbar */
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.current {
+  color: var(--brand-accent) !important;
+  border-bottom: 3px solid var(--brand-accent) !important;
+}
+
+/* Dropdown items */
+.dropdown-item,
+#hr-services-link {
+  color: var(--brand-primary) !important;
+}
+
+.dropdown-item:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* Sub header & request strip */
+.sub-header,
+.request-form {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Icons hover */
+.sub-header ul.right-icons li a:hover {
+  color: var(--brand-accent) !important;
+}
+
+/* Preloader */
+#preloader {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Section backgrounds */
+.services,
+.testimonials {
+  background-color: #f5f6f8 !important;
+}
+.service-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(177, 174, 209, 0.902);
+}
+
+/* Hero slider small heading fix */
+.Modern-Slider .item h6 {
+  color: var(--brand-accent) !important;
+}
+/* =====================================================
+   END OF BRAND THEME – EXECUTIVE CHARCOAL
+   ===================================================== */
+/* =========================================
+   COMPANY NAME (NAVBAR BRAND) COLOR FIX
+   ========================================= */
+
+/* Logo / Company name on hero (dark background) */
+.navbar .navbar-brand,
+.navbar .navbar-brand h2,
+.navbar-brand span {
+  color: var(--brand-accent) !important; /* GOLD */
+}
+
+/* Logo / Company name after scroll (white background) */
+.background-header .navbar-brand,
+.background-header .navbar-brand h2,
+.background-header .navbar-brand span {
+  color: var(--brand-primary) !important; /* CHARCOAL */
+}
+/* =========================================
+   END OF COMPANY NAME (NAVBAR BRAND) COLOR FIX
+   ========================================= */
+
+@media (min-width: 992px) {
+  .services .row > .col-md-4:last-of-type {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Chatbot */
+#chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1c1f26;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#chatbot-box {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+#chatbot-header {
+  padding: 10px;
+  background: #1c1f26;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px 10px 0 0;
+}
+
+#chatbot-messages {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.bot {
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+#chatbot-actions {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+#chatbot-actions button {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 6px;
+  border: none;
+  background: #1c1f26;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#chatbot-close {
+  cursor: pointer;
+}
+/* Our Clients Section */
+.clients-section {
+  padding: 70px 20px;
+  background-color: #f8f9fa;
+}
+
+.clients-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #1c1f26;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 40px;
+  align-items: center;
+  justify-items: center;
+}
+
+.clients-grid img {
+  max-height: 60px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.clients-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 0.75;
+}
+
+/* =========================
+   Page Hero (Reusable)
+========================= */
+
+.page-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.it-hero {
+  background: url("../images/it-hero.png") center center / cover no-repeat;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.page-hero-title {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.page-hero-subtitle {
+  position: relative;
+  z-index: 2;
+  color: #e0e0e0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* End of Our Clients Section */
+
+/* Navbar Careers Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
