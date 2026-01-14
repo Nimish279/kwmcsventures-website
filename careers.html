@@ -1,341 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers | KWMCS Ventures</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+
+  <!-- FIXED CUSTOM STYLES -->
   <style>
-    /* ===============================
-       GLOBAL RESET
-    =============================== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
+    /* Prevent content from hiding under sticky header */
+    .services {
+      margin-top: 120px;
+      padding-bottom: 80px;
     }
 
-    body {
-      background: #f8f9fb;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ===============================
-       NAVBAR
-    =============================== */
-    .navbar {
-      background: #1c1f26;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 700;
-    }
-
-    nav {
+    /* Navbar spacing fix */
+    .main-nav .nav {
       display: flex;
       gap: 25px;
-      align-items: center;
     }
 
-    nav a {
-      color: #fff;
-      font-size: 14px;
-      position: relative;
-    }
-
-    /* Dropdown */
-    .dropdown {
-      position: relative;
+    /* Hide menu trigger on desktop */
+    .menu-trigger {
+      display: none;
       cursor: pointer;
     }
 
-    .dropbtn {
-      color: #fff;
-      font-size: 14px;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 28px;
-      left: 0;
-      background: #fff;
-      min-width: 160px;
-      border-radius: 8px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      overflow: hidden;
-      z-index: 10;
-    }
-
-    .dropdown-content a {
-      display: block;
-      padding: 12px 16px;
-      color: #333;
-      font-size: 14px;
-    }
-
-    .dropdown-content a:hover {
-      background: #f1f1f1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* ===============================
-       CAREERS SECTION
-    =============================== */
-    .careers {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .careers h1 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #666;
-      margin-bottom: 40px;
-    }
-
-    /* Role cards */
-    .role-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-bottom: 50px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    /* ===============================
-       FORM
-    =============================== */
-    .form-container {
-      background: #fff;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-container h2 {
-      text-align: center;
-      margin-bottom: 25px;
-    }
-
-    .career-form {
-      display: grid;
-      gap: 18px;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-group label {
-      font-size: 14px;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-
-    .form-group input,
-    .form-group select {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: #5142fa;
-    }
-
-    .file-note {
-      font-size: 12px;
-      color: #777;
-      margin-top: 4px;
-    }
-
-    .file-name {
-      font-size: 13px;
-      margin-top: 6px;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 14px;
-      background: #5142fa;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #3c32c8;
-    }
-
-    .success-message {
-      display: none;
-      margin-top: 15px;
-      padding: 12px;
-      background: #e7f8ee;
-      color: #1e7e34;
-      border-radius: 8px;
-      text-align: center;
-      font-size: 14px;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .careers h1 {
-        font-size: 28px;
+    @media (max-width: 991px) {
+      .menu-trigger {
+        display: block;
       }
 
-      .form-container {
-        padding: 25px;
+      .main-nav .nav {
+        display: none;
       }
     }
-  </style>
+
+    /* Form polish */
+    input[type="file"] {
+      padding: 8px;
+    }
+
+    .filled-button {
+      padding: 12px 30px;
+    }
+ 
+.header-area {
+  height: auto;
+  padding: 15px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+</style>
+
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">KWMCS Ventures</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+  <!-- ======= HEADER / NAVBAR ======= -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              <h1>KWMCS</h1>
+            </a>
 
-      <div class="dropdown">
-        <span class="dropbtn">Careers ▾</span>
-        <div class="dropdown-content">
-          <a href="careers.html?role=job">Jobs</a>
-          <a href="careers.html?role=internship">Internships</a>
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="careers.html" class="active">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="menu-trigger">
+              <span>Menu</span>
+            </div>
+          </nav>
         </div>
-      </div>
-
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Careers -->
-  <section class="careers">
-    <h1>Careers at KWMCS Ventures</h1>
-    <p class="subtitle">Join our team and grow with us.</p>
-
-    <div class="role-cards">
-      <div class="card">
-        <h3>Full-Time Jobs</h3>
-        <p>Build impactful solutions with a passionate team.</p>
-      </div>
-      <div class="card">
-        <h3>Internships</h3>
-        <p>Learn, explore, and gain hands-on experience.</p>
       </div>
     </div>
+  </header>
 
-    <div class="form-container">
-      <h2>Apply Now</h2>
+  <!-- ======= CAREERS SECTION ======= -->
+  <section class="services">
+    <div class="container">
 
-      <form class="career-form" id="careerForm">
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" required />
+      <!-- Heading -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+         <section class="careers-hero">
+  <h2>Careers at <span class="brand">KWMCS Ventures</span></h2>
+
+  <span>JOIN OUR TEAM AND GROW WITH US</span>
+</section>
+
+        </div>
+      </div>
+
+      <!-- Roles -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="service-item">
+            <h4>Full-Time Jobs</h4>
+            <p>Build impactful solutions with a passionate and experienced team.</p>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" required />
+        <div class="col-md-6">
+          <div class="service-item">
+            <h4>Internships</h4>
+            <p>Learn, explore, and gain hands-on experience in real-world projects.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" required />
-        </div>
+      <!-- Application Form -->
+      <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="service-item">
+            <h4 class="mb-4 text-center">Apply Now</h4>
 
-        <div class="form-group">
-          <label>Role Type</label>
-          <select id="roleType" required>
-            <option value="">Select role</option>
-            <option value="Job">Job</option>
-            <option value="Internship">Internship</option>
-          </select>
-        </div>
+            <form id="careerForm">
+              <div class="row">
 
-        <div class="form-group">
-          <label>Resume (PDF only)</label>
-          <input type="file" id="resume" accept="application/pdf" required />
-          <span class="file-note">Only PDF files allowed</span>
-          <div class="file-name" id="fileName"></div>
-        </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control mb-3" placeholder="Full Name" required>
+                </div>
 
-        <button type="submit">Submit Application</button>
-        <div class="success-message" id="successMessage">
-          ✅ Application submitted successfully!
+                <div class="col-md-6">
+                  <input type="email" class="form-control mb-3" placeholder="Email Address" required>
+                </div>
+
+                <div class="col-md-6">
+                  <input type="tel" class="form-control mb-3" placeholder="Phone Number" required>
+                </div>
+
+                <div class="col-md-6">
+                  <select class="form-control mb-3" required>
+                    <option value="">Select Role</option>
+                    <option value="Job">Job</option>
+                    <option value="Internship">Internship</option>
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <input 
+                    type="file" 
+                    id="resume" 
+                    class="form-control mb-2" 
+                    accept="application/pdf" 
+                    required
+                  >
+                  <small>PDF files only</small>
+                </div>
+
+                <div class="col-md-12 text-center mt-4">
+                  <button type="submit" class="filled-button">
+                    Submit Application
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
         </div>
-      </form>
+      </div>
+
     </div>
   </section>
 
+  <!-- ======= FOOTER ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p>© 2025 KWMCS Ventures. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <!-- Resume Validation -->
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const role = params.get("role");
-    const roleSelect = document.getElementById("roleType");
-
-    if (role === "job") roleSelect.value = "Job";
-    if (role === "internship") roleSelect.value = "Internship";
-
-    const form = document.getElementById("careerForm");
-    const successMessage = document.getElementById("successMessage");
     const resumeInput = document.getElementById("resume");
-    const fileName = document.getElementById("fileName");
+    const form = document.getElementById("careerForm");
 
-    resumeInput.addEventListener("change", () => {
-      if (resumeInput.files.length) {
-        fileName.textContent = resumeInput.files[0].name;
+    resumeInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (file && file.type !== "application/pdf") {
+        alert("Only PDF files are allowed.");
+        this.value = "";
       }
     });
 
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      successMessage.style.display = "block";
-      form.reset();
-      fileName.textContent = "";
+    form.addEventListener("submit", function (e) {
+      const file = resumeInput.files[0];
+      if (!file || file.type !== "application/pdf") {
+        alert("Please upload your resume in PDF format only.");
+        e.preventDefault();
+      }
     });
   </script>
 
