@@ -1,225 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Careers | KWMCS Ventures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-
-  <!-- Theme CSS -->
+  <!-- CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/templatemo-finance-business.css">
   <link rel="stylesheet" href="assets/css/owl.css">
-
-  <!-- FIXED CUSTOM STYLES -->
-  <style>
-    /* Prevent content from hiding under sticky header */
-    .services {
-      margin-top: 120px;
-      padding-bottom: 80px;
-    }
-
-    /* Navbar spacing fix */
-    .main-nav .nav {
-      display: flex;
-      gap: 25px;
-    }
-
-    /* Hide menu trigger on desktop */
-    .menu-trigger {
-      display: none;
-      cursor: pointer;
-    }
-
-    @media (max-width: 991px) {
-      .menu-trigger {
-        display: block;
-      }
-
-      .main-nav .nav {
-        display: none;
-      }
-    }
-
-    /* Form polish */
-    input[type="file"] {
-      padding: 8px;
-    }
-
-    .filled-button {
-      padding: 12px 30px;
-    }
- 
-.header-area {
-  height: auto;
-  padding: 15px 0;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-}
-</style>
-
 </head>
+<script>
+  function setRole(role) {
+    const roleSelect = document.querySelector('select[name="role"]');
+    if (roleSelect) {
+      roleSelect.value = role;
+    }
+  }
+</script>
 
 <body>
 
-  <!-- ======= HEADER / NAVBAR ======= -->
-  <header class="header-area header-sticky">
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="jumper">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!-- Top Header -->
+  <div class="sub-header">
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <a href="index.html" class="logo">
-              <h1>KWMCS</h1>
-            </a>
-
-            <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="careers.html" class="active">Careers</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-            <div class="menu-trigger">
-              <span>Menu</span>
-            </div>
-          </nav>
+        <div class="col-md-8 col-xs-12">
+          <ul class="left-info">
+            <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 10:00AM-6:30PM</a></li>
+            <li><a href="#"><i class="fa fa-phone"></i>+91 7738958880 / +91 7303883882</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="right-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/kwmcs-ventures/"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/kwmcs/"><i class="fa fa-instagram"></i></a></li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <img src="assets/images/kwmcslogo.png" height="55" width="300" alt="KWMCS Ventures Logo">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown">Services</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="./services/hr_services.html">HR Services</a>
+                <a class="dropdown-item" href="./services/marketing_services.html">Marketing Services</a>
+                <a class="dropdown-item" href="./services/Finance.html">Financial Services</a>
+                <a class="dropdown-item" href="./services/it_services.html">IT Services</a>
+              </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item active"><a class="nav-link" href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- ======= CAREERS SECTION ======= -->
-  <section class="services">
-    <div class="container">
+<!-- Page Heading -->
+<div class="page-heading header-text">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Careers</h1>
+        <span>Apply for Jobs or Internships and grow with us</span>
 
-      <!-- Heading -->
-      <div class="row">
-        <div class="col-lg-12 text-center">
-         <section class="careers-hero">
-  <h2>Careers at <span class="brand">KWMCS Ventures</span></h2>
+  
 
-  <span>JOIN OUR TEAM AND GROW WITH US</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CAREER TYPE SELECTION -->
+<section class="career-type-section">
+  <div class="container text-center">
+    <h2>Choose Your Opportunity</h2>
+    <p>Select the type of role you want to apply for</p>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-3">
+        <button class="career-option-btn" onclick="openForm('Job')">
+          Job
+        </button>
+      </div>
+      <div class="col-md-3">
+        <button class="career-option-btn" onclick="openForm('Internship')">
+          Internship
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
-        </div>
+  <!-- APPLY SECTION -->
+<section class="apply-section" id="apply-form" style="display:none;">
+
+    <div class="container-fluid">
+
+
+      <div class="callback-form contact-us">
+          <div class="section-heading text-center">
+        <h2>Apply Now</h2>
       </div>
+        <div class="contact-form">
+            
+          <form action="contactus.php" method="post" enctype="multipart/form-data">
+            <div class="row justify-content-center">
 
-      <!-- Roles -->
-      <div class="row">
-        <div class="col-md-6">
-          <div class="service-item">
-            <h4>Full-Time Jobs</h4>
-            <p>Build impactful solutions with a passionate and experienced team.</p>
-          </div>
-        </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" placeholder="Full Name" required>
+                </fieldset>
+              </div>
 
-        <div class="col-md-6">
-          <div class="service-item">
-            <h4>Internships</h4>
-            <p>Learn, explore, and gain hands-on experience in real-world projects.</p>
-          </div>
-        </div>
-      </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <fieldset>
+                  <input name="email" type="email" class="form-control" placeholder="E-Mail Address" required>
+                </fieldset>
+              </div>
 
-      <!-- Application Form -->
-      <div class="row mt-5">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="service-item">
-            <h4 class="mb-4 text-center">Apply Now</h4>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <fieldset>
+                  <input name="phone" type="tel" class="form-control" placeholder="Phone Number" required>
+                </fieldset>
+              </div>
 
-            <form id="careerForm">
-              <div class="row">
-
-                <div class="col-md-6">
-                  <input type="text" class="form-control mb-3" placeholder="Full Name" required>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="email" class="form-control mb-3" placeholder="Email Address" required>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="tel" class="form-control mb-3" placeholder="Phone Number" required>
-                </div>
-
-                <div class="col-md-6">
-                  <select class="form-control mb-3" required>
-                    <option value="">Select Role</option>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <fieldset>
+                  <select name="role" class="form-control" required>
+                    <option value="">Select Role Type</option>
                     <option value="Job">Job</option>
                     <option value="Internship">Internship</option>
                   </select>
-                </div>
+                </fieldset>
+              </div>
 
-                <div class="col-md-12">
-                  <input 
-                    type="file" 
-                    id="resume" 
-                    class="form-control mb-2" 
-                    accept="application/pdf" 
-                    required
-                  >
-                  <small>PDF files only</small>
-                </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+  <fieldset>
+    <div class="custom-file-wrapper">
+      <input name="resume" type="file" id="resume" accept=".pdf" required>
+      <label for="resume" id="file-label">Choose File</label>
+    </div>
+    <small class="text-muted">Upload Resume (PDF only)</small>
+  </fieldset>
+</div>
 
-                <div class="col-md-12 text-center mt-4">
+
+              <div class="col-lg-12 text-center">
+                <fieldset>
                   <button type="submit" class="filled-button">
                     Submit Application
                   </button>
-                </div>
-
+                </fieldset>
               </div>
-            </form>
 
-          </div>
+            </div>
+          </form>
         </div>
       </div>
 
     </div>
   </section>
+  <!-- END APPLY SECTION -->
 
-  <!-- ======= FOOTER ======= -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <p>© 2025 KWMCS Ventures. All Rights Reserved.</p>
+        <div class="col-md-12 text-center">
+          <p>Copyright © 2024 KWMCS Ventures</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Files -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/owl.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/accordions.js"></script>
+<script>
+  function openForm(role) {
+    const formSection = document.getElementById('apply-form');
+    const roleSelect = document.querySelector('select[name="role"]');
 
-  <!-- Resume Validation -->
-  <script>
-    const resumeInput = document.getElementById("resume");
-    const form = document.getElementById("careerForm");
+    formSection.style.display = 'block';
+    roleSelect.value = role;
 
-    resumeInput.addEventListener("change", function () {
-      const file = this.files[0];
-      if (file && file.type !== "application/pdf") {
-        alert("Only PDF files are allowed.");
-        this.value = "";
-      }
-    });
+    formSection.scrollIntoView({ behavior: 'smooth' });
+  }
+ const fileInput = document.getElementById('resume');
+const fileLabel = document.querySelector('.custom-file-wrapper label');
 
-    form.addEventListener("submit", function (e) {
-      const file = resumeInput.files[0];
-      if (!file || file.type !== "application/pdf") {
-        alert("Please upload your resume in PDF format only.");
-        e.preventDefault();
-      }
-    });
-  </script>
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    fileLabel.textContent = fileInput.files[0].name;
+  } else {
+    fileLabel.textContent = 'Choose File';
+  }
+});
+
+[...document.querySelectorAll('.apply-section, .callback-form.contact-us, .contact-form, .container-fluid, .container')].forEach(el => {
+  console.log(el, 'marginTop:', window.getComputedStyle(el).marginTop, 'paddingTop:', window.getComputedStyle(el).paddingTop);
+});
+
+</script>
 
 </body>
 </html>
