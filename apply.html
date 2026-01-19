@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Careers | KWMCS Ventures</title>
+  <title>Apply Now | KWMCS Ventures</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
@@ -11,22 +11,48 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Core CSS -->
+  
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/fontawesome.css" rel="stylesheet">
   <link href="assets/css/templatemo-finance-business.css" rel="stylesheet">
 
-  <!-- Careers CSS -->
-  <link href="assets/css/careers.css" rel="stylesheet">
+   <link href="assets/css/apply.css" rel="stylesheet">
+  <style>
+    /* ===== APPLY PAGE STYLES ===== */
+
+  .apply-hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("assets/images/slide_01.jpg") center/cover no-repeat;
+    padding: 120px 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .apply-hero h1 {
+    font-weight: 700;
+  }
+
+  .apply-form {
+    margin-top: 0; /* ✅ FIXED */
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  .apply-form label {
+    font-weight: 500;
+  }
+
+  .file-note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+  }
+</style>
 </head>
 
 <body>
-
-<!-- Disable Preloader via CSS -->
-<div id="preloader">
-  <div class="jumper">
-    <div></div><div></div><div></div>
-  </div>
-</div>
 
 <!-- ================= TOP BAR ================= -->
 <div class="sub-header">
@@ -94,7 +120,7 @@
             <a class="nav-link active" href="careers.html">Careers</a>
           </li>
 
-         
+        
 
         </ul>
       </div>
@@ -103,79 +129,67 @@
 </header>
 
 
-<!-- ================= PAGE HEADING ================= -->
-<div class="page-heading header-text">
-  <div class="container text-center">
-    <h1>Careers</h1>
-    <span>Explore open positions and apply</span>
+<!-- ================= HERO ================= -->
+<section class="page-heading apply-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1>Apply Now</h1>
+        <span id="jobTitle"></span>
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- ================= JOB LISTINGS ================= -->
-<section class="container my-5">
+</section>
 
 
+<!-- ================= APPLICATION FORM ================= -->
+<section class="apply-section under-hero-form">
 
-  <!-- Full Stack Developer -->
-  <div class="job-card">
-    <div class="job-header">
-      <h3>Full Stack Developer</h3>
-      <span class="save-job">♡</span>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+
+        <div class="apply-form">
+          <form>
+
+            <div class="row">
+              <div class="col-md-4">
+                <label>Full Name</label>
+                <input type="text" class="form-control" required>
+              </div>
+
+              <div class="col-md-4">
+                <label>Email</label>
+                <input type="email" class="form-control" required>
+              </div>
+
+              <div class="col-md-4">
+                <label>Phone</label>
+                <input type="tel" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label>Upload Resume</label>
+              <input type="file" class="form-control-file"
+                     accept=".pdf,.docx,.jpg,.png" required>
+              <small class="text-muted">
+                Accepted formats: PDF, DOCX, JPG, PNG
+              </small>
+            </div>
+
+            <div class="text-center mt-4">
+              <button type="submit" class="filled-button">
+                Submit Application
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
     </div>
-    <div class="job-meta">
-      <span><i class="fa fa-map-marker"></i> Pune, India</span>
-      <span><i class="fa fa-briefcase"></i> Engineering</span>
-      <span><i class="fa fa-clock-o"></i> Full Time</span>
-    </div>
-    <p>
-      Build and maintain scalable web applications across frontend and backend.
-    </p>
-    <a href="apply.html?role=Full%20Stack%20Developer&type=Full%20Time"
-       class="filled-button">
-      Apply
-    </a>
   </div>
-
-  <!-- Front End Developer -->
-  <div class="job-card">
-    <div class="job-header">
-      <h3>Front End Developer</h3>
-      <span class="save-job">♡</span>
-    </div>
-    <div class="job-meta">
-      <span><i class="fa fa-map-marker"></i> Pune, India</span>
-      <span><i class="fa fa-briefcase"></i> Engineering</span>
-      <span><i class="fa fa-clock-o"></i> Full Time</span>
-    </div>
-    <p>
-      Create responsive, high-quality user interfaces using modern frameworks.
-    </p>
-    <a href="apply.html?role=Front%20End%20Developer&type=Full%20Time"
-       class="filled-button">
-      Apply
-    </a>
-  </div>
-
-  <!-- QA Tester -->
-  <div class="job-card">
-    <div class="job-header">
-      <h3>QA / Software Tester</h3>
-      <span class="save-job">♡</span>
-    </div>
-    <div class="job-meta">
-      <span><i class="fa fa-map-marker"></i> Pune, India</span>
-      <span><i class="fa fa-briefcase"></i> Quality Assurance</span>
-      <span><i class="fa fa-clock-o"></i> Full Time</span>
-    </div>
-    <p>
-      Ensure software quality through manual and automated testing processes.
-    </p>
-    <a href="apply.html?role=QA%20Software%20Tester&type=Full%20Time"
-       class="filled-button">
-      Apply
-    </a>
-  </div>
-
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -252,14 +266,14 @@
 <!-- FOOTER END -->
 
 
-<!-- ================= JS ================= -->
+<!-- ================= SCRIPT ================= -->
 <script>
-document.querySelectorAll(".save-job").forEach(btn => {
-  btn.onclick = () => {
-    btn.classList.toggle("saved");
-    btn.innerText = btn.classList.contains("saved") ? "♥" : "♡";
-  };
-});
+  const params = new URLSearchParams(window.location.search);
+  const role = params.get("role");
+
+  if (role) {
+    document.getElementById("jobTitle").innerText = role.toUpperCase();
+  }
 </script>
 
 </body>
