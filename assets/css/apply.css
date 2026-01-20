@@ -277,3 +277,40 @@
   margin: 0;
   padding: 12px 0;
 }
+/* ===============================
+   REQUIRED / OPTIONAL INDICATORS
+   =============================== */
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+.optional {
+  font-size: 13px;
+  color: #777;
+  margin-left: 6px;
+}
+
+/* ===============================
+   PURPLE SUBMIT BUTTON
+   =============================== */
+.apply-form .filled-button {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+.apply-form .filled-button:hover {
+  background-color: #584ee0;
+  border-color: #584ee0;
+}
+
+/* ===============================
+   SUCCESS MESSAGE
+   =============================== */
+#successMessage {
+  display: none;
+  color: #28a745;
+  font-weight: 500;
+  margin-top: 20px;
+}
