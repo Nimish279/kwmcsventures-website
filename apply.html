@@ -150,42 +150,91 @@
       <div class="col-lg-8 col-md-10">
 
         <div class="apply-form">
-          <form>
+  <form id="applicationForm">
 
-            <div class="row">
-              <div class="col-md-4">
-                <label>Full Name</label>
-                <input type="text" class="form-control" required>
-              </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label>
+          Full Name <span class="required">*</span>
+        </label>
+        <input type="text" class="form-control" required>
+      </div>
 
-              <div class="col-md-4">
-                <label>Email</label>
-                <input type="email" class="form-control" required>
-              </div>
+      <div class="col-md-4">
+        <label>
+          Email <span class="required">*</span>
+        </label>
+        <input type="email" class="form-control" required>
+      </div>
 
-              <div class="col-md-4">
-                <label>Phone</label>
-                <input type="tel" class="form-control" required>
-              </div>
-            </div>
+      <div class="col-md-4">
+        <label>
+          Phone <span class="required">*</span>
+        </label>
+        <input type="tel"
+       class="form-control"
+       required
+       pattern="[0-9]{10}"
+       title="Please enter a valid 10-digit phone number">
+      </div>
+    </div>
 
-            <div class="mt-4">
-              <label>Upload Resume</label>
-              <input type="file" class="form-control-file"
-                     accept=".pdf,.docx,.jpg,.png" required>
-              <small class="text-muted">
-                Accepted formats: PDF, DOCX, JPG, PNG
-              </small>
-            </div>
+    <!-- Current Status -->
+    <div class="mt-4">
+      <label>
+        Current Status <span class="required">*</span>
+      </label>
+      <select class="form-control" required>
+        <option value="">Select your status</option>
+        <option>Student</option>
+        <option>Graduate</option>
+        <option>Working Professional</option>
+      </select>
+    </div>
 
-            <div class="text-center mt-4">
-              <button type="submit" class="filled-button">
-                Submit Application
-              </button>
-            </div>
+    <!-- Year of Graduation -->
+    <div class="mt-4">
+      <label>
+        Year of Graduation <span class="optional">(optional)</span>
+      </label>
+      <input type="number" class="form-control" placeholder="e.g. 2026">
+    </div>
 
-          </form>
-        </div>
+    <!-- Portfolio / GitHub -->
+    <div class="mt-4">
+      <label>
+        Portfolio / GitHub URL <span class="optional">(optional)</span>
+      </label>
+      <input type="url" class="form-control"
+             placeholder="https://github.com/username or portfolio link">
+    </div>
+
+    <!-- Resume Upload -->
+    <div class="mt-4">
+      <label>
+        Upload Resume <span class="required">*</span>
+      </label>
+      <input type="file" class="form-control-file"
+             accept=".pdf,.docx,.jpg,.png" required>
+      <small class="text-muted">
+        Accepted formats: PDF, DOCX, JPG, PNG
+      </small>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center mt-4">
+      <button type="submit" class="filled-button">
+        Submit Application
+      </button>
+
+      <p id="successMessage">
+         Application submitted successfully.
+      </p>
+    </div>
+
+  </form>
+</div>
+
 
       </div>
     </div>
@@ -274,6 +323,17 @@
   if (role) {
     document.getElementById("jobTitle").innerText = role.toUpperCase();
   }
+</script>
+
+<script>
+  const form = document.getElementById("applicationForm");
+  const successMsg = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    successMsg.style.display = "block";
+    form.reset();
+  });
 </script>
 
 </body>
