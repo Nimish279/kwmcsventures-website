@@ -417,15 +417,19 @@ header .navbar {
 }
 
 .Modern-Slider .item-1 .img-fill {
-  background-image: url(../images/Finance_carousel.jpg);
+  background-image: url(../images/Financial-HeroHome.png);
 }
 
 .Modern-Slider .item-2 .img-fill {
-  background-image: url(../images/HR_carousel.jpg);
+  background-image: url(../images/HR-HomeHero.png);
 }
 
 .Modern-Slider .item-3 .img-fill {
-  background-image: url(../images/Marketing_carousel.jpg);
+  background-image: url(../images/Marketting-HomeHero.png);
+}
+
+.Modern-Slider .item-4 .img-fill {
+  background-image: url(../images/IT-HomeHero.png);
 }
 
 .Modern-Slider .NextArrow {
@@ -679,13 +683,17 @@ ul.slick-dots {
 .service-box {
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
   padding: 30px;
   margin-bottom: 30px;
   transition: all 0.3s ease;
 }
 .service-box:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.15),
+    0 6px 6px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
 .service-image {
