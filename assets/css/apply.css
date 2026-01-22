@@ -314,3 +314,22 @@
   font-weight: 500;
   margin-top: 20px;
 }
+
+/* Prevent placeholder clipping */
+.phone-input input::placeholder {
+  white-space: nowrap;
+}
+/* Unified focus style for ALL inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #000 !important;
+}
+
+/* Remove Bootstrap blue glow */
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #000 !important;
+}
