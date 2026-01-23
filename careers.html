@@ -115,50 +115,95 @@
 <section class="container my-5">
 
   <!-- Field Sales -->
-  <div class="job-card">
-    <div class="job-header">
-      <h3>Field Sales</h3>
-      <span class="save-job">♡</span>
-    </div>
-    <div class="job-meta">
-      <span><i class="fa fa-map-marker"></i> Pune, India</span>
-      <span><i class="fa fa-briefcase"></i> Sales</span>
-      <span><i class="fa fa-clock-o"></i> Full Time</span>
-    </div>
-    <p>
-      Engage with clients, generate leads, and support business growth through on-field sales activities.
-    </p>
-    <a href="apply.html?role=Field%20Sales&type=Job"
-       class="filled-button">
-      Apply
-    </a>
+<div class="job-card">
+  <div class="job-header">
+    <h3>Field Sales</h3>
   </div>
+
+  <div class="job-meta">
+    <span><i class="fa fa-map-marker"></i> Pune, India</span>
+    <span><i class="fa fa-briefcase"></i> Sales</span>
+    <span><i class="fa fa-clock-o"></i> Full Time</span>
+  </div>
+
+  <p>
+    Engage with clients, generate leads, and support business growth through on-field sales activities.
+  </p>
+
+  <!-- START JD -->
+  <a href="javascript:void(0)" class="jd-toggle">View More</a>
+
+<div class="jd-content">
+  <h5>Roles & Responsibilities</h5>
+  <ul>
+    <li>Plan and execute on-ground / BTL activities including pamphlet distribution, kiosks, roadshows, and college tie-ups.</li>
+    <li>Organize influencer-led local activations and events.</li>
+    <li>Drive store-centric promotions such as standees, signage, referrals, and walk-in incentives.</li>
+    <li>Support hyperlocal digital campaigns via Instagram, Google Maps/GMB, WhatsApp, and communities.</li>
+    <li>Create location-wise customized plans based on student density and nearby IT hubs.</li>
+    <li>Prepare cost estimates, manpower planning, and timelines.</li>
+    <li>Track expected daily and weekly walk-ins from each activity.</li>
+  </ul>
+</div>
+
+  <!--  END JD -->
+
+  <a href="apply.html?role=Field%20Sales&type=Job" class="filled-button">
+    Apply
+  </a>
+</div>
+
 
   <!-- HR Sourcing Internship -->
   <div class="job-card">
-    <div class="job-header">
-      <h3>HR Sourcing Intern</h3>
-      <span class="save-job">♡</span>
-    </div>
-    <div class="job-meta">
-      <span><i class="fa fa-map-marker"></i> Pune, India</span>
-      <span><i class="fa fa-briefcase"></i> Human Resources</span>
-      <span><i class="fa fa-clock-o"></i> Internship (2–4 Weeks)</span>
-    </div>
-    <p>
-      Assist in sourcing candidates, screening resumes, and supporting recruitment operations.
-    </p>
-    <a href="apply.html?role=HR%20Sourcing%20Intern&type=Internship"
-       class="filled-button">
-      Apply
-    </a>
+  <div class="job-header">
+    <h3>HR Intern</h3>
   </div>
+
+  <div class="job-meta">
+    <span><i class="fa fa-map-marker"></i> Pune, India</span>
+    <span><i class="fa fa-briefcase"></i> Human Resources</span>
+    <span><i class="fa fa-clock-o"></i> Internship</span>
+  </div>
+
+  <p>
+    Assist HR operations including recruitment, interviews, and database management.
+  </p>
+ <!-- START JD -->
+  <a href="javascript:void(0)" class="jd-toggle">View More</a>
+
+  <div class="jd-content">
+    <h5>Roles & Responsibilities</h5>
+    <ul>
+      <li>Handling job portals and posting job openings.</li>
+      <li>Working on recruitment and selection processes.</li>
+      <li>Conducting first-round interviews via phone calls.</li>
+      <li>Maintaining and updating candidate databases.</li>
+      <li>Supporting day-to-day HR-related activities.</li>
+      <li>Freshers will be prioritized over experienced candidates.</li>
+    </ul>
+
+    <p><strong>Work Distribution:</strong></p>
+    <ul>
+      <li>35% – Calling & candidate coordination</li>
+      <li>20% – Database management</li>
+      <li>20% – Job portals handling</li>
+      <li>15% – Other HR operational activities</li>
+    </ul>
+  </div>
+ <!--  END JD -->
+
+  <a href="apply.html?role=HR%20Intern&type=Internship" class="filled-button">
+    Apply
+  </a>
+</div>
+
 
   <!-- Social Media Handling Internship -->
   <div class="job-card">
     <div class="job-header">
       <h3>Social Media Handling Intern</h3>
-      <span class="save-job">♡</span>
+     
     </div>
     <div class="job-meta">
       <span><i class="fa fa-map-marker"></i> Pune, India</span>
@@ -192,13 +237,14 @@
         Landmark: Near Model College
       </p>
 
-      <div class="footer-socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
+      <ul class="social-icons">
+              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/kwmcs-ventures/"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/kwmcs/"><i class="fa fa-instagram"></i></a></li>
+              
+            </ul>
+          </div>
 
     <!-- Useful Links -->
     <div class="footer-col">
@@ -251,15 +297,19 @@
 <!-- FOOTER END -->
 
 
-<!-- ================= JS ================= -->
 <script>
-document.querySelectorAll(".save-job").forEach(btn => {
-  btn.onclick = () => {
-    btn.classList.toggle("saved");
-    btn.innerText = btn.classList.contains("saved") ? "♥" : "♡";
-  };
-});
+  document.querySelectorAll(".jd-toggle").forEach(toggle => {
+    toggle.addEventListener("click", function () {
+      const jd = this.nextElementSibling;
+      jd.classList.toggle("open");
+
+      this.innerText = jd.classList.contains("open")
+        ? "View Less"
+        : "View More";
+    });
+  });
 </script>
+
 
 </body>
 </html>
