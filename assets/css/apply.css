@@ -333,3 +333,37 @@ textarea:focus {
   box-shadow: none !important;
   border-color: #000 !important;
 }
+  /* Modal / status UI */
+  .app-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .18s ease, visibility .18s;
+  }
+  .app-modal.show { visibility: visible; opacity: 1; }
+  .app-modal .panel {
+    background: #fff;
+    border-radius: 10px;
+    padding: 28px 36px;
+    text-align: center;
+    min-width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+  .spinner {
+    width: 56px; height: 56px; margin: 8px auto 12px; border-radius: 50%;
+    border: 6px solid #e6e6e6; border-top-color: #0d6efd; animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .status-icon { font-size: 48px; margin: 6px 0; display:none }
+  .status-icon.ok { color: #28a745; display:none }
+  .status-icon.err { color: #dc3545; display:none }
+  .panel.success .spinner { display:none }
+  .panel.success .status-icon.ok { display:block }
+  .panel.error .spinner { display:none }
+  .panel.error .status-icon.err { display:block }
