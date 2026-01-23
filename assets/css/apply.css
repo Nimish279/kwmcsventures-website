@@ -333,3 +333,13 @@ textarea:focus {
   box-shadow: none !important;
   border-color: #000 !important;
 }
+/* ===============================
+   TOP INFO BAR – FORCE WHITE TEXT
+   =============================== */
+
+.sub-header,
+.sub-header span,
+.sub-header a,
+.sub-header i {
+  color: #ffffff !important;
+}

@@ -120,16 +120,6 @@
   font-weight: 600;
 }
 
-/* Save job icon */
-.save-job {
-  font-size: 26px;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.save-job.saved {
-  color: #f44336;
-}
 
 /* Job meta */
 .job-meta {
@@ -359,4 +349,34 @@ footer {
   width: 100%;
   margin: 0;
   padding: 12px 0;
+}
+/* ===============================
+   TOP INFO BAR – FORCE WHITE TEXT
+   =============================== */
+
+.sub-header,
+.sub-header span,
+.sub-header a,
+.sub-header i {
+  color: #ffffff !important;
+}
+
+.jd-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+}
+
+.jd-content.open {
+  max-height: 800px; /* enough to show full JD */
+}
+
+.jd-toggle {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
 }
