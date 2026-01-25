@@ -364,3 +364,36 @@ a.filled-button:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
+    /* ===== APPLY PAGE STYLES ===== */
+
+
+.apply-hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("assets/images/slide_01.jpg") center/cover no-repeat;
+    padding: 120px 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .apply-hero h1 {
+    font-weight: 700;
+  }
+
+  .apply-form {
+    margin-top: 0; /* ✅ FIXED */
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+
+  .apply-form label {
+    font-weight: 500;
+  }
+
+  .file-note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+  }
