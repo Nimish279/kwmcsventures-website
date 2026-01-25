@@ -16,12 +16,17 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/fontawesome.css" rel="stylesheet">
   <link href="assets/css/templatemo-finance-business.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/owl.css">
+<link rel="stylesheet" href="assets/css/styles.css">
 
    <link href="assets/css/apply.css" rel="stylesheet">
 
     <!-- intl-tel-input CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"/>
-  <link rel="stylesheet" href="styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
+  />
+
   <style>
     /* ===== APPLY PAGE STYLES ===== */
 
@@ -102,17 +107,73 @@
           </li>
 
           <!-- SERVICES DROPDOWN -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
-               role="button" data-toggle="dropdown">
-              Services
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="services.html">All Services</a>
-              <a class="dropdown-item" href="it-services.html">IT Services</a>
-              <a class="dropdown-item" href="consulting.html">Consulting</a>
-            </div>
-          </li>
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" id="navbarDropdown">
+    Services
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+    <div class="dropdown-submenu dropdown-item">
+      <a id="hr-services-link">HR Services ></a>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a class="dropdown-item" href="./services/staffing.html">Talent Acquisition</a>
+        </li>
+        <div class="dropdown-divider"></div>
+        <li>
+          <a class="dropdown-item" href="./services/hr_services.html">Consulting</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="dropdown-divider"></div>
+
+    <div class="dropdown-submenu dropdown-item">
+      <a id="hr-services-link">Marketing Services ></a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="./services/saanand.html">On-Site promotions</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/Visual_Merchandising.html">Visual Merchandising</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/mystery_shopping.html">Mystery Shopping</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/data_collection.html">Data Collection</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown-divider"></div>
+
+    <div class="dropdown-submenu dropdown-item">
+      <a id="hr-services-link">Financial Services ></a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="./services/Finance.html#strategic_consulting">Strategic Financial Consulting</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/Finance.html#tax-advisory">Tax Advisory</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/Finance.html#wealth-mmgmt">Wealth Management</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/Finance.html#risk_mitigation">Risk Mitigation</a></li>
+        <div class="dropdown-divider"></div>
+        <li><a class="dropdown-item" href="./services/audits.html">Audits</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown-divider"></div>
+
+    <div class="dropdown-submenu dropdown-item">
+      <a id="hr-services-link">IT Services ></a>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="./services/it_services.html">
+            Website Development & IT Solutions
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</li>
 
           <li class="nav-item">
             <a class="nav-link" href="about.html">About Us</a>
@@ -167,7 +228,7 @@
   type="text"
   name="full_name"
   placeholder="First Middle Last"
-  pattern="^[A-Za-z]+$"
+  pattern="^[A-Za-z]+ [A-Za-z]+ [A-Za-z]+$"
   title="Enter name in First Middle Last format only"
   required
 >
@@ -180,7 +241,7 @@
 <input
   type="email"
   name="email"
-  placeholder="name@example.com"
+  placeholder="abc@domain.com"
   required
 >
       </div>
@@ -195,7 +256,7 @@
   id="phone"
   name="phone"
   class="form-control"
-  placeholder=""
+  placeholder="Enter phone number"
   required
 >
 
@@ -398,7 +459,28 @@
     successMsg.style.display = "block";
     form.reset();
   });
+
+  
+</script>
+<script>
+  document.querySelectorAll(".jd-toggle").forEach(toggle => {
+    toggle.addEventListener("click", function () {
+      const jd = this.nextElementSibling;
+      jd.classList.toggle("open");
+
+      this.innerText = jd.classList.contains("open")
+        ? "View Less"
+        : "View More";
+    });
+  });
 </script>
 
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/accordions.js"></script>
 </body>
 </html>
