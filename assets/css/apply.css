@@ -347,12 +347,6 @@ textarea:focus {
    SERVICES DROPDOWN (GLOBAL)
    =============================== */
 
-.navbar .dropdown-menu {
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  padding: 12px 0;
-  border: none;
-}
 
 .dropdown-submenu {
   position: relative;
