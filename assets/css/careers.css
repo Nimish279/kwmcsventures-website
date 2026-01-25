@@ -1,10 +1,13 @@
 /* ===============================
    CAREERS & APPLY PAGE – FINAL CSS
    =============================== */
-
+:root {
+  --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
+  --brand-accent: #ffff; /* Gold */
+}
 /* Disable theme preloader if any */
 #preloader {
-  display: none !important;
+  background-color: var(--brand-primary) !important;
 }
 
 /* ===============================

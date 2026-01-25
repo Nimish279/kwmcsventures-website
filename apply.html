@@ -20,6 +20,8 @@
 <link rel="stylesheet" href="assets/css/styles.css">
 
    <link href="assets/css/apply.css" rel="stylesheet">
+   <link href="assets/css/styles.css" rel="stylesheet">
+   <link href="assets/css/owl.css" rel="stylesheet">
 
     <!-- intl-tel-input CSS -->
   <link
@@ -91,109 +93,111 @@
 <header>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/images/kwmcslogo.png" height="55" alt="KWMCS Ventures">
-      </a>
+      <img
+        src="assets/images/kwmcslogo.png"
+        height="55"
+        width="300"
+        alt="KWMCS Ventures Logo"
+      />
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
 
-          <!-- SERVICES DROPDOWN -->
-        <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" id="navbarDropdown">
-    Services
-  </a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown">Services</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">HR Services ></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="./services/staffing.html">Talent Acquisition</a>
+                  </li>
+                  <div class="dropdown-divider"></div>
+                  <li>
+                    <a class="dropdown-item" href="./services/hr_services.html">Consulting</a>
+                  </li>
+                </ul>
+              </div>
 
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-divider"></div>
 
-    <div class="dropdown-submenu dropdown-item">
-      <a id="hr-services-link">HR Services ></a>
-      <ul class="dropdown-menu">
-        <li class="dropdown-submenu">
-          <a class="dropdown-item" href="./services/staffing.html">Talent Acquisition</a>
-        </li>
-        <div class="dropdown-divider"></div>
-        <li>
-          <a class="dropdown-item" href="./services/hr_services.html">Consulting</a>
-        </li>
-      </ul>
-    </div>
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">Marketing Services ></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./services/saanand.html">On-Site promotions</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Visual_Merchandising.html">Visual Merchandising</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/mystery_shopping.html">Mystery Shopping</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/data_collection.html">Data Collection</a></li>
+                </ul>
+              </div>
 
-    <div class="dropdown-divider"></div>
+              <div class="dropdown-divider"></div>
 
-    <div class="dropdown-submenu dropdown-item">
-      <a id="hr-services-link">Marketing Services ></a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="./services/saanand.html">On-Site promotions</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/Visual_Merchandising.html">Visual Merchandising</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/mystery_shopping.html">Mystery Shopping</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/data_collection.html">Data Collection</a></li>
-      </ul>
-    </div>
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">Financial Services ></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./services/Finance.html#strategic_consulting">Strategic Financial Consulting</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Finance.html#tax-advisory">Tax Advisory</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Finance.html#wealth-mmgmt">Wealth Management</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Finance.html#risk_mitigation">Risk Mitigation</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/audits.html">Audits</a></li>
+                </ul>
+              </div>
 
-    <div class="dropdown-divider"></div>
+              <div class="dropdown-divider"></div>
 
-    <div class="dropdown-submenu dropdown-item">
-      <a id="hr-services-link">Financial Services ></a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="./services/Finance.html#strategic_consulting">Strategic Financial Consulting</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/Finance.html#tax-advisory">Tax Advisory</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/Finance.html#wealth-mmgmt">Wealth Management</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/Finance.html#risk_mitigation">Risk Mitigation</a></li>
-        <div class="dropdown-divider"></div>
-        <li><a class="dropdown-item" href="./services/audits.html">Audits</a></li>
-      </ul>
-    </div>
-
-    <div class="dropdown-divider"></div>
-
-    <div class="dropdown-submenu dropdown-item">
-      <a id="hr-services-link">IT Services ></a>
-      <ul class="dropdown-menu">
-        <li>
-          <a class="dropdown-item" href="./services/it_services.html">
-            Website Development & IT Solutions
-          </a>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</li>
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">IT Services ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./services/it_services.html">Website Development & IT Solutions</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="about.html">About Us</a>
           </li>
 
-           <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="careers.html">Careers</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#top"
+              >Careers <span class="sr-only">(current)</span></a
+            >
           </li>
-
-        
-
         </ul>
       </div>
     </div>
   </nav>
 </header>
+
 
 
 <!-- ================= HERO ================= -->
@@ -426,7 +430,13 @@
 <!-- intl-tel-input JS -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/accordions.js"></script>
 <script>
   // Job title from URL
   const params = new URLSearchParams(window.location.search);
