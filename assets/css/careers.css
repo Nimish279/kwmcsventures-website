@@ -1,0 +1,434 @@
+/* ===============================
+   CAREERS & APPLY PAGE – FINAL CSS
+   =============================== */
+:root {
+  --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
+  --brand-accent: #ffff; /* Gold */
+}
+/* Disable theme preloader if any */
+#preloader {
+  background-color: var(--brand-primary) !important;
+}
+
+/* ===============================
+   HERO / APPLY HERO
+   =============================== */
+
+.apply-hero {
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("../images/slide_01.jpg") center/cover no-repeat;
+}
+
+.apply-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.apply-hero p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ===============================
+   APPLY SECTION
+   =============================== */
+
+.apply-section {
+  position: relative;
+  z-index: 5;
+  background: #f9f9f9;
+  padding: 70px 0 100px;
+  margin-top: -40px; /* clean overlap with hero */
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ===============================
+   APPLY FORM BOX
+   =============================== */
+
+.apply-form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeUp 0.5s ease;
+}
+
+.apply-form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="tel"] {
+  height: 45px;
+  border-radius: 6px;
+}
+
+.apply-form input[type="file"] {
+  margin-top: 6px;
+}
+
+.apply-form small {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Submit button alignment */
+.apply-form .filled-button {
+  padding: 10px 30px;
+  font-size: 15px;
+}
+
+/* ===============================
+   JOB CARD (CAREERS LIST PAGE)
+   =============================== */
+
+.job-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+/* Job meta */
+.job-meta {
+  margin: 12px 0;
+}
+
+.job-meta span {
+  margin-right: 18px;
+  font-size: 14px;
+  color: #777;
+}
+
+.job-meta i {
+  margin-right: 6px;
+  color: #a4c639;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+footer {
+  margin-top: 80px;
+  padding: 30px 0;
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===============================
+   ANIMATIONS
+   =============================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+  .apply-hero h1 {
+    font-size: 32px;
+  }
+
+  .apply-section {
+    margin-top: -20px;
+    padding: 50px 0 80px;
+  }
+
+  .apply-form {
+    padding: 25px;
+  }
+
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-meta span {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+/* ===============================
+   FOOTER (CAREERS & APPLY)
+   =============================== */
+
+.site-footer {
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  padding-top: 60px;          /* ✔ controlled height */
+  margin-top: 0 !important;   /* ✔ remove extra gap */
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;       /* ✔ compact bottom */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Columns */
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Lists */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #6c63ff;
+}
+
+/* Social Icons */
+.footer-socials {
+  margin-top: 18px;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  color: #111;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+/* Contact Form */
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  background: #333;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  color: #fff;
+  outline: none;
+}
+
+.footer-form textarea {
+  resize: none;
+}
+
+.footer-form button {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-form button:hover {
+  background: #584ee0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: #2d2d2d;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ccc;
+  font-size: 13px;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+/* ===============================
+   FIX FOOTER BOTTOM GAP
+   =============================== */
+
+.site-footer {
+  padding-bottom: 0 !important;   /* remove extra space */
+}
+
+.footer-bottom {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 12px 0;
+}
+/* ===============================
+   TOP INFO BAR – FORCE WHITE TEXT
+   =============================== */
+
+.sub-header,
+.sub-header span,
+.sub-header a,
+.sub-header i {
+  color: #ffffff !important;
+}
+
+.jd-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+}
+
+.jd-content.open {
+  max-height: 800px; /* enough to show full JD */
+}
+
+.jd-toggle {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* ===============================
+   SERVICES DROPDOWN (GLOBAL)
+   =============================== */
+
+.navbar .dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 12px 0;
+  border: none;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  display: none;
+  min-width: 220px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Prevent vertical stacking */
+.dropdown-menu .dropdown-menu {
+  top: 0 !important;
+  left: 100% !important;
+}
+/* ===============================
+   FIX FOOTER CONTACT FORM ALIGNMENT
+   =============================== */
+
+.site-footer {
+  text-align: left;   /* override global footer centering */
+}
+
+.site-footer .footer-form {
+  text-align: left;
+}
+
+.site-footer .footer-form button {
+  display: inline-block;
+  margin-left: 0;
+}

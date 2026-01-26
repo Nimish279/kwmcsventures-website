@@ -1,7 +1,9 @@
 .dropdown-menu {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
 
 @media screen and (min-width: 992px) {
@@ -181,7 +183,9 @@ a.filled-button:hover {
   background-color: #f5f6f8 !important;
 }
 .service-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-item:hover {
@@ -365,5 +369,52 @@ a.filled-button:hover {
   text-transform: uppercase;
 }
 
+/* ===== APPLY PAGE STYLES ===== */
 
-/* End of Our Clients Section */
+.apply-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("assets/images/slide_01.jpg") center/cover no-repeat;
+  padding: 120px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.apply-hero h1 {
+  font-weight: 700;
+}
+
+.apply-form {
+  margin-top: 0; /* ✅ FIXED */
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.apply-form label {
+  font-weight: 500;
+}
+
+.file-note {
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+}
+/* Hero slider overlay */
+.img-fill {
+  position: relative;
+}
+
+.img-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.text-content {
+  position: relative;
+  z-index: 2;
+}

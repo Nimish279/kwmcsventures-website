@@ -1,0 +1,388 @@
+/* ===============================
+   APPLY PAGE ONLY
+   =============================== */
+
+/* ===============================
+   APPLY PAGE HERO (MATCH CAREERS)
+   =============================== */
+.apply-heading {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("../images/slide_01.jpg") center center / cover no-repeat;
+}
+
+.apply-heading h1,
+.apply-heading span {
+  color: #fff;
+}
+
+
+/* ===============================
+   FORM SECTION UNDER HERO
+   =============================== */
+.under-hero-form {
+  background: #ffffff;
+  padding: 60px 0 0;   /* ✅ REMOVE bottom gap */
+  margin-bottom: 0;
+}
+
+
+/* ===============================
+   APPLICATION FORM (NO BOX)
+   =============================== */
+.apply-form {
+  background: transparent;
+  padding: 0;
+  margin-top: 40px; /* 👈 pushes form down from hero */
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Labels */
+.apply-form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="tel"] {
+  height: 46px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 0 12px;
+  width: 100%;
+}
+
+/* File input */
+.apply-form input[type="file"] {
+  margin-top: 6px;
+}
+
+/* Helper text */
+.apply-form small {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===============================
+   SUBMIT BUTTON
+   =============================== */
+.apply-form .filled-button {
+  padding: 10px 34px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+/* ===============================
+   FORCE REMOVE ANY BOX STYLES
+   =============================== */
+.apply-form {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+   =============================== */
+@media (max-width: 768px) {
+  .apply-hero {
+    padding: 90px 0 40px;
+  }
+
+  .apply-hero h1 {
+    font-size: 32px;
+  }
+
+  .under-hero-form {
+    padding: 40px 0 70px;
+  }
+
+  .apply-form {
+    margin-top: 30px;
+  }
+}
+/* ===============================
+   FOOTER (CAREERS & APPLY)
+   =============================== */
+
+.site-footer {
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  padding-top: 60px;          /* ✔ controlled height */
+  margin-top: 0 !important;   /* ✔ remove extra gap */
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;       /* ✔ compact bottom */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Columns */
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Lists */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #6c63ff;
+}
+
+/* Social Icons */
+.footer-socials {
+  margin-top: 18px;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  color: #111;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+/* Contact Form */
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  background: #333;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  color: #fff;
+  outline: none;
+}
+
+.footer-form textarea {
+  resize: none;
+}
+
+.footer-form button {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-form button:hover {
+  background: #584ee0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: #2d2d2d;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ccc;
+  font-size: 13px;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+/* ===============================
+   APPLY PAGE FOOTER FIX (FINAL)
+   =============================== */
+
+.under-hero-form + footer,
+.under-hero-form + .site-footer {
+  margin-top: 0 !important;
+}
+
+.site-footer {
+  padding-top: 50px;
+}
+
+.site-footer * {
+  margin-bottom: 0;
+}
+/* ===============================
+   FIX FOOTER BOTTOM GAP
+   =============================== */
+
+.site-footer {
+  padding-bottom: 0 !important;   /* remove extra space */
+}
+
+.footer-bottom {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 12px 0;
+}
+/* ===============================
+   REQUIRED / OPTIONAL INDICATORS
+   =============================== */
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+.optional {
+  font-size: 13px;
+  color: #777;
+  margin-left: 6px;
+}
+
+/* ===============================
+   PURPLE SUBMIT BUTTON
+   =============================== */
+.apply-form .filled-button {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+.apply-form .filled-button:hover {
+  background-color: #584ee0;
+  border-color: #584ee0;
+}
+
+/* ===============================
+   SUCCESS MESSAGE
+   =============================== */
+#successMessage {
+  display: none;
+  color: #28a745;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Prevent placeholder clipping */
+.phone-input input::placeholder {
+  white-space: nowrap;
+}
+/* Unified focus style for ALL inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #000 !important;
+}
+
+/* Remove Bootstrap blue glow */
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #000 !important;
+}
+/* ===============================
+   TOP INFO BAR – FORCE WHITE TEXT
+   =============================== */
+
+.sub-header,
+.sub-header span,
+.sub-header a,
+.sub-header i {
+  color: #ffffff !important;
+}
+/* ===============================
+   SERVICES DROPDOWN (GLOBAL)
+   =============================== */
+
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  display: none;
+  min-width: 220px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Prevent vertical stacking */
+.dropdown-menu .dropdown-menu {
+  top: 0 !important;
+  left: 100% !important;
+}
+/* ===============================
+   FIX FOOTER CONTACT FORM ALIGNMENT
+   =============================== */
+
+.site-footer {
+  text-align: left;   /* override global footer centering */
+}
+
+.site-footer .footer-form {
+  text-align: left;
+}
+
+.site-footer .footer-form button {
+  display: inline-block;
+  margin-left: 0;
+}
