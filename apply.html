@@ -59,7 +59,6 @@
     color: #777;
     margin-top: 5px;
   }
-  
 </style>
 </head>
 
@@ -215,8 +214,9 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
 
-        <div class="apply-form">
-  <form id="applicationForm">
+          <div class="apply-form">
+        <form id="applicationForm" action="apply.php" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="role" id="roleInput" value="">
 
     <div class="row">
       <div class="col-md-4">
@@ -229,8 +229,9 @@
     name="full_name"
     class="form-control"
     placeholder="Enter your full name"
-    required
-  >
+    pattern="^[A-Za-z]+ [A-Za-z]+ [A-Za-z]+$"
+    title="Enter name in First Middle Last format only"
+    required>
       </div>
 
       <div class="col-md-4">
@@ -257,17 +258,19 @@
   class="form-control"
   placeholder="Enter phone number"
   required
->
+  inputmode="numeric"
+  pattern="\d{10}"
+  maxlength="10">
 
       </div>
     </div>
 
-    <!-- Current Status -->
-    <div class="mt-4">
-      <label>
+  <!-- Current Status -->
+      <div class="mt-4">
+        <label>
         Current Status <span class="required">*</span>
       </label>
-      <select class="form-control" required>
+      <select name="status" class="form-control" required>
         <option value="">Select your status</option>
         <option>Student</option>
         <option>Graduate</option>
@@ -277,12 +280,13 @@
 
 
    <!-- Education -->
-<div class="mt-4">
+   <div class="mt-4">
   <label>
     Education <span class="required">*</span>
   </label>
   <input
     type="text"
+    name="education"
     class="form-control"
     placeholder="e.g. B.Tech, MBA"
     required
@@ -295,9 +299,10 @@
       <label>
         Portfolio / GitHub URL <span class="optional">(optional)</span>
       </label>
-      <input type="url" class="form-control"
-             placeholder="github.com/username or portfolio link"
-    title="Enter your GitHub profile or personal portfolio URL" >
+            <input type="url" name="portfolio" class="form-control"
+              placeholder="https://github.com/username or portfolio link"
+          title="Enter your GitHub profile or personal portfolio URL"
+          pattern="https://.*" >
     </div>
 
     <!-- LinkedIn -->
@@ -307,9 +312,12 @@
   </label>
   <input 
     type="url" 
+    name="linkedin"
     class="form-control"
-    placeholder="LinkedIn profile URL"
+    placeholder="https://www.linkedin.com/in/username"
     required
+    pattern="https://.*"
+    title="LinkedIn URL must start with https://"
   >
 </div>
 
@@ -318,7 +326,7 @@
       <label>
         Upload Resume <span class="required">*</span>
       </label>
-      <input type="file" class="form-control-file"
+      <input type="file" name="resume" class="form-control-file"
              accept=".pdf,.docx,.jpg,.png" required>
       <small class="text-muted">
         Accepted formats: PDF, DOCX, JPG, PNG
@@ -331,8 +339,8 @@
         Submit Application
       </button>
 
-      <p id="successMessage">
-         Application submitted successfully.
+      <p id="successMessage" style="display:none">
+        Application submitted successfully.
       </p>
     </div>
 
@@ -434,6 +442,10 @@
     document.getElementById("jobTitle").innerText = role.toUpperCase();
   }
 
+  // set hidden role input value
+  const roleInput = document.getElementById('roleInput') || document.querySelector('input[name="role"]');
+  if (roleInput) roleInput.value = role || '';
+
   // Phone input with flags
   const phoneInput = document.querySelector("#phone");
   window.intlTelInput(phoneInput, {
@@ -455,24 +467,48 @@
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    successMsg.style.display = "block";
-    form.reset();
-  });
+    if (roleInput) roleInput.value = role || '';
 
-  
-</script>
-<script>
-  document.querySelectorAll(".jd-toggle").forEach(toggle => {
-    toggle.addEventListener("click", function () {
-      const jd = this.nextElementSibling;
-      jd.classList.toggle("open");
+    // Build FormData and send via fetch
+    const fd = new FormData(form);
+    // show modal
+    const modal = document.getElementById('applicationModal');
+    const panel = modal.querySelector('.panel');
+    const msgEl = modal.querySelector('.modal-message');
+    modal.classList.add('show');
+    panel.classList.remove('success','error');
+    msgEl.textContent = 'Sending application...';
 
-      this.innerText = jd.classList.contains("open")
-        ? "View Less"
-        : "View More";
-    });
+    fetch(form.action, { method: 'POST', body: fd })
+      .then(resp => resp.json().catch(() => ({ success: false, message: 'Invalid server response' })))
+      .then(data => {
+          if (data && data.success) {
+          panel.classList.add('success');
+          msgEl.textContent = data.message || 'Application submitted successfully.';
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1800);
+        } else {
+          panel.classList.add('error');
+          msgEl.textContent = (data && data.message) ? data.message : 'Submission failed. Please try again.';
+        }
+      })
+      .catch(err => {
+        panel.classList.add('error');
+        msgEl.textContent = 'Network error. Please try again.';
+      });
   });
 </script>
+
+<!-- Modal HTML -->
+<div id="applicationModal" class="app-modal" aria-hidden="true">
+  <div class="panel">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="status-icon ok"><i class="fa fa-check-circle"></i></div>
+    <div class="status-icon err"><i class="fa fa-times-circle"></i></div>
+    <div class="modal-message" style="margin-top:8px">Sending...</div>
+  </div>
+</div>
 
 <!-- Vendor JS -->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -483,5 +519,6 @@
 <script src="assets/js/owl.js"></script>
 <script src="assets/js/slick.js"></script>
 <script src="assets/js/accordions.js"></script>
+
 </body>
 </html>
