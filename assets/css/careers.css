@@ -451,37 +451,28 @@ footer {
   width: auto;
 }
 
-/* iPhone SE, Galaxy S8+ */
-@media (max-width: 576px) {
-  .navbar-logo {
-    max-height: 40px;
-  }
-}
 
-/* Galaxy Z Fold (folded) */
-@media (max-width: 390px) {
-  .navbar-logo {
-    max-height: 36px;
-  }
-}
 
 /* ===============================
    CAREERS HERO – RESPONSIVE FIX
    =============================== */
 
 .page-heading {
-  padding: 120px 15px 80px;
+  padding: 230px 0px 150px 0px;
 }
+
 
 .page-heading h1 {
   font-size: 42px;
   line-height: 1.2;
 }
 
-/* Galaxy S8+, iPhone SE */
+
+/* iPhone SE, Galaxy S8+ */
 @media (max-width: 576px) {
   .page-heading {
-    padding: 90px 15px 60px;
+    padding: 90px 15px 70px;
+    min-height: auto;
   }
 
   .page-heading h1 {
@@ -500,3 +491,17 @@ footer {
     font-size: 24px;
   }
 }
+
+@media (max-width: 576px) {
+  .navbar-logo {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar-logo {
+    max-height: 36px;
+  }
+}
+
+
