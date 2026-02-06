@@ -71,9 +71,8 @@ try {
 
 <tr>
 <td style="background:#0d6efd;padding:18px;text-align:center;">
-<img src="https://www.kwmcsventures.com/assets/images/kwmcslogo.png"
-     alt="KWMCS Ventures"
-     style="max-width:300px;height:auto;display:block;margin:0 auto 10px;">
+<img src="https://www.kwmcsventures.com/assets/images/kwmcslogo.png" alt="KWMCS Ventures"
+// style="max-width:300px;height:auto;display:block;margin:0 auto 10px;">
 <p style="color:#ffffff;font-size:15px;margin:0;">Careers Portal</p>
 </td>
 </tr>

@@ -121,7 +121,7 @@
 
 :root {
   --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
-  --brand-accent: #ffff; /* Gold */
+  --brand-accent: rgba(81, 66, 250, 0.902);/* Gold */
 }
 
 /* Headings & emphasis */
@@ -370,4 +370,31 @@ a.filled-button:hover {
 
 .whatsapp-float:hover {
   transform: scale(1.05);
+}
+
+.clients-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollClients 25s linear infinite;
+}
+
+.clients-track img {
+  margin: 0 30px;
+  max-height: 60px;
+  width: auto;
+}
+
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

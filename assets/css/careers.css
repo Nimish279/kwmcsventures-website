@@ -3,7 +3,7 @@
    =============================== */
 :root {
   --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
-  --brand-accent: #ffff; /* Gold */
+  --brand-accent: rgba(81, 66, 250, 0.902); /* Gold */
 }
 /* Disable theme preloader if any */
 #preloader {
