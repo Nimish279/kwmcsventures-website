@@ -141,19 +141,6 @@
 }
 
 /* ===============================
-   FOOTER
-   =============================== */
-
-footer {
-  margin-top: 80px;
-  padding: 30px 0;
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* ===============================
    ANIMATIONS
    =============================== */
 
@@ -197,132 +184,6 @@ footer {
   }
 }
 /* ===============================
-   FOOTER (CAREERS & APPLY)
-   =============================== */
-
-.site-footer {
-  background: #222;
-  color: #fff;
-  font-size: 14px;
-  padding-top: 60px;          /* ✔ controlled height */
-  margin-top: 0 !important;   /* ✔ remove extra gap */
-}
-
-/* Layout */
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 40px;       /* ✔ compact bottom */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-/* Columns */
-.footer-col h4 {
-  font-size: 18px;
-  margin-bottom: 18px;
-  color: #fff;
-}
-
-.footer-col p {
-  color: #ccc;
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-
-/* Lists */
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-  color: #6c63ff;
-}
-
-/* Social Icons */
-.footer-socials {
-  margin-top: 18px;
-}
-
-.footer-socials a {
-  display: inline-flex;
-  width: 38px;
-  height: 38px;
-  background: #fff;
-  color: #111;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-right: 10px;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.footer-socials a:hover {
-  background: #6c63ff;
-  color: #fff;
-}
-
-/* Contact Form */
-.footer-form input,
-.footer-form textarea {
-  width: 100%;
-  background: #333;
-  border: none;
-  border-radius: 22px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-  color: #fff;
-  outline: none;
-}
-
-.footer-form textarea {
-  resize: none;
-}
-
-.footer-form button {
-  background: #6c63ff;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.footer-form button:hover {
-  background: #584ee0;
-}
-
-/* Bottom Bar */
-.footer-bottom {
-  background: #2d2d2d;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 0;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: #ccc;
-  font-size: 13px;
-}
-
-/* ===============================
    RESPONSIVE
    =============================== */
 
@@ -338,21 +199,7 @@ footer {
     gap: 30px;
   }
 }
-/* ===============================
-   FIX FOOTER BOTTOM GAP
-   =============================== */
 
-.site-footer {
-  padding-bottom: 0 !important;   /* remove extra space */
-}
-
-.footer-bottom {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 12px 0;
-}
 /* ===============================
    TOP INFO BAR – FORCE WHITE TEXT
    =============================== */

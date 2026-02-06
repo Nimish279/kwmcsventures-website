@@ -18,7 +18,7 @@
   <link href="assets/css/styles.css" rel="stylesheet">
 
   <!-- Careers CSS -->
-  <link href="assets/css/careers.css" rel="stylesheet">
+  <!--<link href="assets/css/careers.css" rel="stylesheet">-->
   <link href="assets/css/apply.css" rel="stylesheet">
 
     <!-- intl-tel-input CSS -->
@@ -348,21 +348,14 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<!-- FOOTER START -->
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <!-- Location -->
-    <div class="footer-col">
-      <h4>Location</h4>
-      <p>
-        Gajanankrupa CHS Ltd,<br>
-        Chinchpada rd, Katemanavali,<br>
-        Kalyan (E) – 421306<br>
-        Landmark: Near Model College
-      </p>
-
-     <ul class="social-icons">
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-item">
+            <h4>Location</h4>
+            <p>Gajanankrupa CHS Ltd, <br>Chinchpada rd, Katemanavali, <br>Kalyan (E)  - 421306 <br>Landmark: Near Model College</p>
+            <ul class="social-icons">
               <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="https://www.linkedin.com/company/kwmcs-ventures/"><i class="fa fa-linkedin"></i></a></li>
@@ -370,57 +363,78 @@
               
             </ul>
           </div>
-
-    <!-- Useful Links -->
-    <div class="footer-col">
-      <h4>Useful Links</h4>
-      <ul>
-        <li><a href="#">Fund Expert</a></li>
-        <li><a href="#">Mint Pro</a></li>
-        <li><a href="#">Asset Plus</a></li>
-        <li><a href="#">Probus Insurance</a></li>
-        <li><a href="#">Cams 360</a></li>
-        <li><a href="#">Kfinkart</a></li>
-        <li><a href="#">Samco Security</a></li>
-        <li><a href="#">Rank MF</a></li>
-        <li><a href="#">Renew Buy</a></li>
-      </ul>
+          <div class="col-md-3 footer-item">
+            <h4>Useful Links</h4>
+            <ul class="menu-list">
+              <li><a href="https://prabhuji.fundexpert.net" target="_blank">Fund expert</a></li>
+              <li><a href="#">Mint Pro</a></li>
+              <li><a href="#">Asset Plus</a></li>
+              <li><a href="#">Probus Insurance</a></li>
+              <li><a href="#">Cams 360</a></li>
+              <li><a href="#">Kfinkart</a></li>
+              <li><a href="#">Samco Security</a></li>
+              <li><a href="#">Rank MF</a></li>
+              <li><a href="#">Renew Buy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Menu List</h4>
+            <ul class="menu-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services/hr_services.html">HR Services</a></li>
+              <li><a href="services/marketing_services.html">Marketing Services</a></li>
+              <li><a href="services/Finance.html">Financial Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item last-item">
+            <h4>Contact Us</h4>
+            <div class="contact-form">
+              <form id="contact footer-contact" action="contactus2.php" method="post">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>                    </fieldset>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Copyright &copy; 2026 KWMCS Ventures. All Rights Reserved.
+            
+            <!--- Design: <a rel="nofollow noopener" href="" target="_blank"></a><br>-->
+            <!--Distributed By: <a rel="nofollow noopener" href="" target="_blank"></a>-->
+          </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Menu List -->
-    <div class="footer-col">
-      <h4>Menu List</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="#">HR Services</a></li>
-        <li><a href="#">Marketing Services</a></li>
-        <li><a href="#">Financial Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="footer-col">
-      <h4>Contact Us</h4>
-      <form class="footer-form">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="E-Mail Address">
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">SEND MESSAGE</button>
-      </form>
-    </div>
-
-  </div>
-
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>Copyright © 2026</p>
-  </div>
-</footer>
-<!-- FOOTER END -->
-
 
 <!-- ================= SCRIPT ================= -->
 
