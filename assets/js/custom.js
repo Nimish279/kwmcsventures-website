@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
       setTimeout(function () {
         $("#preloader").css("visibility", "hidden").fadeOut();
       }, 300);
-    }
+    },
   );
 
   $(window).scroll(function () {
@@ -137,41 +137,9 @@ jQuery(document).ready(function ($) {
             step: function () {
               $this.text(Math.ceil(this.Counter));
             },
-          }
+          },
         );
       });
     }
   });
-});
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("chatbot-toggle");
-  const box = document.getElementById("chatbot-box");
-  const close = document.getElementById("chatbot-close");
-  const messages = document.getElementById("chatbot-messages");
-
-  toggle.onclick = () => {
-    box.style.display = "flex";
-  };
-
-  close.onclick = () => {
-    box.style.display = "none";
-  };
-
-  window.botReply = function (type) {
-    let text = "";
-
-    if (type === "services") {
-      text = "We provide Financial, HR, and Marketing services.";
-    }
-
-    if (type === "contact") {
-      text = "You can reach us via the Contact Us page.";
-    }
-
-    const div = document.createElement("div");
-    div.className = "bot";
-    div.innerText = text;
-    messages.appendChild(div);
-    messages.scrollTop = messages.scrollHeight;
-  };
 });

@@ -3,20 +3,30 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Apply Now | KWMCS Ventures</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Careers | KWMCS Ventures</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Core CSS -->
-  
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/fontawesome.css" rel="stylesheet">
   <link href="assets/css/templatemo-finance-business.css" rel="stylesheet">
+  <link href="assets/css/owl.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
 
-   <link href="assets/css/apply.css" rel="stylesheet">
+  <!-- Careers CSS -->
+  <!--<link href="assets/css/careers.css" rel="stylesheet">-->
+  <link href="assets/css/apply.css" rel="stylesheet">
+
+    <!-- intl-tel-input CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
+  />
+
   <style>
     /* ===== APPLY PAGE STYLES ===== */
 
@@ -58,18 +68,22 @@
 <div class="sub-header">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-xs-12">
         <ul class="left-info">
-          <li><i class="fa fa-clock-o"></i> Mon-Fri 10:00AM–6:30PM</li>
-          <li><i class="fa fa-phone"></i> +91 7738958880 / +91 7303883882</li>
+          <li>
+            <a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 10:00AM-6:30PM</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-phone"></i>+917738958880/+917303883882</a>
+          </li>
         </ul>
       </div>
       <div class="col-md-4">
         <ul class="right-icons">
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/kwmcs-ventures/"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/kwmcs/"><i class="fa fa-instagram"></i></a></li>
         </ul>
       </div>
     </div>
@@ -77,34 +91,83 @@
 </div>
 
 <!-- ================= NAVBAR ================= -->
-<header>
+<header class="">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/images/kwmcslogo.png" height="55" alt="KWMCS Ventures">
-      </a>
+      <img src="assets/images/kwmcslogo.png" height="55" width="300" alt="KWMCS Ventures Logo">
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
-
-          <!-- SERVICES DROPDOWN -->
+          
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown"
-               role="button" data-toggle="dropdown">
-              Services
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="services.html">All Services</a>
-              <a class="dropdown-item" href="it-services.html">IT Services</a>
-              <a class="dropdown-item" href="consulting.html">Consulting</a>
+            <a class="nav-link dropdown-toggle" id="navbarDropdown">Services</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">HR Services ></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item" href="./services/staffing.html">Talent Acquisition</a>
+                  </li>
+                  <div class="dropdown-divider"></div>
+                  <li>
+                    <a class="dropdown-item" href="./services/hr_services.html">Consulting</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">Marketing Services ></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./services/saanand.html">On-Site promotions</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Visual_Merchandising.html">Visual Merchandising</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/mystery_shopping.html">Mystery Shopping</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/data_collection.html">Data Collection</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">Financial Services ></a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./services/Finance.html#strategic_consulting">Strategic Financial Consulting</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Finance.html#tax-advisory">Tax Advisory</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Finance.html#wealth-mmgmt">Wealth Management</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/Finance.html#risk_mitigation">Risk Mitigation</a></li>
+                  <div class="dropdown-divider"></div>
+                  <li><a class="dropdown-item" href="./services/audits.html">Audits</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown-divider"></div>
+
+              <div class="dropdown-submenu dropdown-item">
+                <a id="hr-services-link">IT Services ></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./services/it_services.html">Website Development & IT Solutions</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </li>
 
@@ -112,25 +175,22 @@
             <a class="nav-link" href="about.html">About Us</a>
           </li>
 
-           <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="careers.html">Careers</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="careers.html"
+              >Careers <span class="sr-only">(current)</span></a
+            >
           </li>
-
-        
-
         </ul>
       </div>
     </div>
   </nav>
 </header>
-
-
 <!-- ================= HERO ================= -->
-<section class="page-heading apply-heading">
+<section class="page-heading apply-heading header-text">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -149,43 +209,138 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
 
-        <div class="apply-form">
-          <form>
+          <div class="apply-form">
+        <form id="applicationForm" action="apply.php" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="role" id="roleInput" value="">
 
-            <div class="row">
-              <div class="col-md-4">
-                <label>Full Name</label>
-                <input type="text" class="form-control" required>
-              </div>
+    <div class="row">
+      <div class="col-md-4">
+           <label>
+  Full Name <span class="required">*</span>
+</label>
+<input
+    type="text"
+    id="fullName"
+    name="full_name"
+    class="form-control"
+    placeholder="Enter your full name"
+    required
+  >
+      </div>
 
-              <div class="col-md-4">
-                <label>Email</label>
-                <input type="email" class="form-control" required>
-              </div>
+      <div class="col-md-4">
+        <label>
+  Email Address <span class="required">*</span>
+</label>
+<input
+  type="email"
+  name="email"
+  placeholder="abc@domain.com"
+  required
+>
+      </div>
 
-              <div class="col-md-4">
-                <label>Phone</label>
-                <input type="tel" class="form-control" required>
-              </div>
-            </div>
+      <div class="col-md-4">
+<label>
+  Contact Number <span class="required">*</span>
+</label>
 
-            <div class="mt-4">
-              <label>Upload Resume</label>
-              <input type="file" class="form-control-file"
-                     accept=".pdf,.docx,.jpg,.png" required>
-              <small class="text-muted">
-                Accepted formats: PDF, DOCX, JPG, PNG
-              </small>
-            </div>
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  class="form-control"
+  placeholder="Enter phone number"
+  required
+  inputmode="numeric"
+  pattern="\d{10}"
+  maxlength="10">
 
-            <div class="text-center mt-4">
-              <button type="submit" class="filled-button">
-                Submit Application
-              </button>
-            </div>
+      </div>
+    </div>
 
-          </form>
-        </div>
+  <!-- Current Status -->
+      <div class="mt-4">
+        <label>
+        Current Status <span class="required">*</span>
+      </label>
+      <select name="status" class="form-control" required>
+        <option value="">Select your status</option>
+        <option>Student</option>
+        <option>Graduate</option>
+        <option>Working Professional</option>
+      </select>
+    </div>
+
+
+   <!-- Education -->
+   <div class="mt-4">
+  <label>
+    Education <span class="required">*</span>
+  </label>
+  <input
+    type="text"
+    name="education"
+    class="form-control"
+    placeholder="e.g. B.Tech, MBA"
+    required
+  >
+</div>
+
+
+    <!-- Portfolio / GitHub -->
+    <div class="mt-4">
+      <label>
+        Portfolio / GitHub URL <span class="optional">(optional)</span>
+      </label>
+            <input type="url" name="portfolio" class="form-control"
+              placeholder="https://github.com/username or portfolio link"
+          title="Enter your GitHub profile or personal portfolio URL"
+          pattern="https://.*" >
+    </div>
+
+    <!-- LinkedIn -->
+<div class="mt-4">
+  <label>
+    LinkedIn Profile <span class="required">*</span>
+  </label>
+  <input 
+    type="url" 
+    name="linkedin"
+    class="form-control"
+    placeholder="https://www.linkedin.com/in/username"
+    required
+    pattern="https://.*"
+    title="LinkedIn URL must start with https://"
+  >
+</div>
+
+    <!-- Resume Upload -->
+    <div class="mt-4">
+      <label>
+        Upload Resume <span class="required">*</span>
+      </label>
+      <input type="file" name="resume" class="form-control-file"
+             accept=".pdf,.docx,.jpg,.png" required>
+      <small class="text-muted">
+        Accepted formats: PDF, DOCX, JPG, PNG
+      </small>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center mt-4">
+      <button type="submit" class="filled-button">
+        Submit Application
+      </button>
+
+      <p id="successMessage" style="display:none">
+        Application submitted successfully.
+      </p>
+    </div>
+
+  </form>
+</div>
+
 
       </div>
     </div>
@@ -193,88 +348,185 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<!-- FOOTER START -->
-<footer class="site-footer">
-  <div class="footer-container">
-
-    <!-- Location -->
-    <div class="footer-col">
-      <h4>Location</h4>
-      <p>
-        Gajanankrupa CHS Ltd,<br>
-        Chinchpada rd, Katemanavali,<br>
-        Kalyan (E) – 421306<br>
-        Landmark: Near Model College
-      </p>
-
-      <div class="footer-socials">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 footer-item">
+            <h4>Location</h4>
+            <p>Gajanankrupa CHS Ltd, <br>Chinchpada rd, Katemanavali, <br>Kalyan (E)  - 421306 <br>Landmark: Near Model College</p>
+            <ul class="social-icons">
+              <li><a rel="nofollow" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/kwmcs-ventures/"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/kwmcs/"><i class="fa fa-instagram"></i></a></li>
+              
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Useful Links</h4>
+            <ul class="menu-list">
+              <li><a href="https://prabhuji.fundexpert.net" target="_blank">Fund expert</a></li>
+              <li><a href="#">Mint Pro</a></li>
+              <li><a href="#">Asset Plus</a></li>
+              <li><a href="#">Probus Insurance</a></li>
+              <li><a href="#">Cams 360</a></li>
+              <li><a href="#">Kfinkart</a></li>
+              <li><a href="#">Samco Security</a></li>
+              <li><a href="#">Rank MF</a></li>
+              <li><a href="#">Renew Buy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item">
+            <h4>Menu List</h4>
+            <ul class="menu-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services/hr_services.html">HR Services</a></li>
+              <li><a href="services/marketing_services.html">Marketing Services</a></li>
+              <li><a href="services/Finance.html">Financial Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 footer-item last-item">
+            <h4>Contact Us</h4>
+            <div class="contact-form">
+              <form id="contact footer-contact" action="contactus2.php" method="post">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>                    </fieldset>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="sub-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Copyright &copy; 2026 KWMCS Ventures. All Rights Reserved.
+            
+            <!--- Design: <a rel="nofollow noopener" href="" target="_blank"></a><br>-->
+            <!--Distributed By: <a rel="nofollow noopener" href="" target="_blank"></a>-->
+          </p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Useful Links -->
-    <div class="footer-col">
-      <h4>Useful Links</h4>
-      <ul>
-        <li><a href="#">Fund Expert</a></li>
-        <li><a href="#">Mint Pro</a></li>
-        <li><a href="#">Asset Plus</a></li>
-        <li><a href="#">Probus Insurance</a></li>
-        <li><a href="#">Cams 360</a></li>
-        <li><a href="#">Kfinkart</a></li>
-        <li><a href="#">Samco Security</a></li>
-        <li><a href="#">Rank MF</a></li>
-        <li><a href="#">Renew Buy</a></li>
-      </ul>
-    </div>
-
-    <!-- Menu List -->
-    <div class="footer-col">
-      <h4>Menu List</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="#">HR Services</a></li>
-        <li><a href="#">Marketing Services</a></li>
-        <li><a href="#">Financial Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="footer-col">
-      <h4>Contact Us</h4>
-      <form class="footer-form">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="E-Mail Address">
-        <textarea rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">SEND MESSAGE</button>
-      </form>
-    </div>
-
-  </div>
-
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>Copyright © 2026</p>
-  </div>
-</footer>
-<!-- FOOTER END -->
-
-
 <!-- ================= SCRIPT ================= -->
+
+<!-- intl-tel-input JS -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"></script>
+
 <script>
+  // Job title from URL
   const params = new URLSearchParams(window.location.search);
   const role = params.get("role");
-
   if (role) {
     document.getElementById("jobTitle").innerText = role.toUpperCase();
   }
+
+  // set hidden role input value
+  const roleInput = document.getElementById('roleInput') || document.querySelector('input[name="role"]');
+  if (roleInput) roleInput.value = role || '';
+
+  // Phone input with flags
+  const phoneInput = document.querySelector("#phone");
+  window.intlTelInput(phoneInput, {
+    initialCountry: "auto",
+    separateDialCode: true,
+    utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+    geoIpLookup: function (callback) {
+      fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => callback(data.country_code))
+        .catch(() => callback("IN"));
+    }
+  });
+
+  // Form submit
+  const form = document.getElementById("applicationForm");
+  const successMsg = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (roleInput) roleInput.value = role || '';
+
+    // Build FormData and send via fetch
+    const fd = new FormData(form);
+    // show modal
+    const modal = document.getElementById('applicationModal');
+    const panel = modal.querySelector('.panel');
+    const msgEl = modal.querySelector('.modal-message');
+    modal.classList.add('show');
+    panel.classList.remove('success','error');
+    msgEl.textContent = 'Sending application...';
+
+    fetch(form.action, { method: 'POST', body: fd })
+      .then(resp => resp.json().catch(() => ({ success: false, message: 'Invalid server response' })))
+      .then(data => {
+          if (data && data.success) {
+          panel.classList.add('success');
+          msgEl.textContent = data.message || 'Application submitted successfully.';
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 1800);
+        } else {
+          panel.classList.add('error');
+          msgEl.textContent = (data && data.message) ? data.message : 'Submission failed. Please try again.';
+        }
+      })
+      .catch(err => {
+        panel.classList.add('error');
+        msgEl.textContent = 'Network error. Please try again.';
+      });
+  });
 </script>
+
+<!-- Modal HTML -->
+<div id="applicationModal" class="app-modal" aria-hidden="true">
+  <div class="panel">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="status-icon ok"><i class="fa fa-check-circle"></i></div>
+    <div class="status-icon err"><i class="fa fa-times-circle"></i></div>
+    <div class="modal-message" style="margin-top:8px">Sending...</div>
+  </div>
+</div>
+
+<!-- Vendor JS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Site scripts -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/accordions.js"></script>
 
 </body>
 </html>

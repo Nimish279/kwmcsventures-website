@@ -417,21 +417,20 @@ header .navbar {
 }
 
 .Modern-Slider .item-1 .img-fill {
-  background-image: url(../images/Financial-HeroHome.png);
+  background-image: url(../images/Finance_carousel.png);
 }
 
 .Modern-Slider .item-2 .img-fill {
-  background-image: url(../images/HR-HomeHero.png);
+  background-image: url(../images/HR_carousel.png);
 }
 
 .Modern-Slider .item-3 .img-fill {
-  background-image: url(../images/Marketting-HomeHero.png);
+  background-image: url(../images/Marketing_carousel.png);
 }
 
 .Modern-Slider .item-4 .img-fill {
-  background-image: url(../images/IT-HomeHero.png);
+  background-image: url(../images/IT_carousel.png);
 }
-
 .Modern-Slider .NextArrow {
   position: absolute;
   top: 50%;
