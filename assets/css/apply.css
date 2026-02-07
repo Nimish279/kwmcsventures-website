@@ -277,3 +277,224 @@
   margin: 0;
   padding: 12px 0;
 }
+/* ===============================
+   REQUIRED / OPTIONAL INDICATORS
+   =============================== */
+.required {
+  color: red;
+  margin-left: 4px;
+}
+
+.optional {
+  font-size: 13px;
+  color: #777;
+  margin-left: 6px;
+}
+
+/* ===============================
+   PURPLE SUBMIT BUTTON
+   =============================== */
+.apply-form .filled-button {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+  color: #fff;
+}
+
+.apply-form .filled-button:hover {
+  background-color: #584ee0;
+  border-color: #584ee0;
+}
+
+/* ===============================
+   SUCCESS MESSAGE
+   =============================== */
+#successMessage {
+  display: none;
+  color: #28a745;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Prevent placeholder clipping */
+.phone-input input::placeholder {
+  white-space: nowrap;
+}
+/* Unified focus style for ALL inputs */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 2px solid #000 !important;
+}
+
+/* Remove Bootstrap blue glow */
+.form-control:focus {
+  box-shadow: none !important;
+  border-color: #000 !important;
+}
+/* TOP INFO BAR – FORCE WHITE TEXT */
+.sub-header,
+.sub-header span,
+.sub-header a,
+.sub-header i {
+  color: #ffffff !important;
+}
+
+/* SERVICES DROPDOWN (GLOBAL) */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  display: none;
+  min-width: 220px;
+}
+.dropdown-submenu:hover > .dropdown-menu { display: block; }
+.dropdown-menu .dropdown-menu {
+  top: 0 !important;
+  left: 100% !important;
+}
+
+/* FIX FOOTER CONTACT FORM ALIGNMENT */
+.site-footer { text-align: left; }
+.site-footer .footer-form { text-align: left; }
+.site-footer .footer-form button { display: inline-block; margin-left: 0; }
+
+/* Modal / status UI */
+.app-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .18s ease, visibility .18s;
+}
+.app-modal.show { visibility: visible; opacity: 1; }
+.app-modal .panel {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 36px;
+  text-align: center;
+  min-width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+.spinner {
+  width: 56px;
+  height: 56px;
+  margin: 8px auto 12px;
+  border-radius: 50%;
+  border: 6px solid #e6e6e6;
+  border-top-color: #0d6efd;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.status-icon { font-size: 48px; margin: 6px 0; display:none }
+.status-icon.ok { color: #28a745; display:none }
+.status-icon.err { color: #dc3545; display:none }
+.panel.success .spinner { display:none }
+.panel.success .status-icon.ok { display:block }
+.panel.error .spinner { display:none }
+.panel.error .status-icon.err { display:block }
+
+/* ===============================
+   NAVBAR – MOBILE FIX (ALL DEVICES)
+   =============================== */
+
+.navbar {
+  padding: 10px 16px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  max-height: 48px;
+  width: auto;
+}
+
+/* iPhone SE, Galaxy S8+ */
+@media (max-width: 576px) {
+  .navbar-logo {
+    max-height: 40px;
+  }
+}
+
+/* Galaxy Z Fold (folded) */
+@media (max-width: 390px) {
+  .navbar-logo {
+    max-height: 36px;
+  }
+}
+
+/* ===============================
+   CAREERS HERO – RESPONSIVE FIX
+   =============================== */
+
+.page-heading {
+  padding: 260px 0px 150px 0px;
+}
+
+.page-heading h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+/* Galaxy S8+, iPhone SE */
+@media (max-width: 576px) {
+  .page-heading {
+    padding: 90px 15px 60px;
+  }
+
+  .page-heading h1 {
+    font-size: 28px;
+  }
+
+  .page-heading span {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Galaxy Z Fold (folded) */
+@media (max-width: 390px) {
+  .page-heading h1 {
+    font-size: 24px;
+  }
+}
+/* ================= THEME SUBMIT BUTTON ================= */
+.apply-form .filled-button {
+  background-color: #6c63ff;       /* theme purple */
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 36px;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.apply-form .filled-button:hover {
+  background-color: #4e47d6;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.35);
+}
+
+/* Focus */
+.apply-form .filled-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.3);
+}

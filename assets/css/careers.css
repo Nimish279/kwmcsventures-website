@@ -1,10 +1,13 @@
 /* ===============================
    CAREERS & APPLY PAGE – FINAL CSS
    =============================== */
-
+:root {
+  --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
+  --brand-accent: rgba(81, 66, 250, 0.902); /* Gold */
+}
 /* Disable theme preloader if any */
 #preloader {
-  display: none !important;
+  background-color: var(--brand-primary) !important;
 }
 
 /* ===============================
@@ -120,16 +123,6 @@
   font-weight: 600;
 }
 
-/* Save job icon */
-.save-job {
-  font-size: 26px;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.save-job.saved {
-  color: #f44336;
-}
 
 /* Job meta */
 .job-meta {
@@ -145,19 +138,6 @@
 .job-meta i {
   margin-right: 6px;
   color: #a4c639;
-}
-
-/* ===============================
-   FOOTER
-   =============================== */
-
-footer {
-  margin-top: 80px;
-  padding: 30px 0;
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  font-size: 14px;
 }
 
 /* ===============================
@@ -204,132 +184,6 @@ footer {
   }
 }
 /* ===============================
-   FOOTER (CAREERS & APPLY)
-   =============================== */
-
-.site-footer {
-  background: #222;
-  color: #fff;
-  font-size: 14px;
-  padding-top: 60px;          /* ✔ controlled height */
-  margin-top: 0 !important;   /* ✔ remove extra gap */
-}
-
-/* Layout */
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 40px;       /* ✔ compact bottom */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-/* Columns */
-.footer-col h4 {
-  font-size: 18px;
-  margin-bottom: 18px;
-  color: #fff;
-}
-
-.footer-col p {
-  color: #ccc;
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-
-/* Lists */
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-  color: #6c63ff;
-}
-
-/* Social Icons */
-.footer-socials {
-  margin-top: 18px;
-}
-
-.footer-socials a {
-  display: inline-flex;
-  width: 38px;
-  height: 38px;
-  background: #fff;
-  color: #111;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-right: 10px;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-.footer-socials a:hover {
-  background: #6c63ff;
-  color: #fff;
-}
-
-/* Contact Form */
-.footer-form input,
-.footer-form textarea {
-  width: 100%;
-  background: #333;
-  border: none;
-  border-radius: 22px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-  color: #fff;
-  outline: none;
-}
-
-.footer-form textarea {
-  resize: none;
-}
-
-.footer-form button {
-  background: #6c63ff;
-  color: #fff;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.footer-form button:hover {
-  background: #584ee0;
-}
-
-/* Bottom Bar */
-.footer-bottom {
-  background: #2d2d2d;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 0;
-}
-
-.footer-bottom p {
-  margin: 0;
-  color: #ccc;
-  font-size: 13px;
-}
-
-/* ===============================
    RESPONSIVE
    =============================== */
 
@@ -345,18 +199,156 @@ footer {
     gap: 30px;
   }
 }
+
 /* ===============================
-   FIX FOOTER BOTTOM GAP
+   TOP INFO BAR – FORCE WHITE TEXT
+   =============================== */
+
+.sub-header,
+.sub-header span,
+.sub-header a,
+.sub-header i {
+  color: #ffffff !important;
+}
+
+.jd-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 10px;
+}
+
+.jd-content.open {
+  max-height: 800px; /* enough to show full JD */
+}
+
+.jd-toggle {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4f46e5;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* ===============================
+   SERVICES DROPDOWN (GLOBAL)
+   =============================== */
+
+.navbar .dropdown-menu {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 12px 0;
+  border: none;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  display: none;
+  min-width: 220px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Prevent vertical stacking */
+.dropdown-menu .dropdown-menu {
+  top: 0 !important;
+  left: 100% !important;
+}
+/* ===============================
+   FIX FOOTER CONTACT FORM ALIGNMENT
    =============================== */
 
 .site-footer {
-  padding-bottom: 0 !important;   /* remove extra space */
+  text-align: left;   /* override global footer centering */
 }
 
-.footer-bottom {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 12px 0;
+.site-footer .footer-form {
+  text-align: left;
 }
+
+.site-footer .footer-form button {
+  display: inline-block;
+  margin-left: 0;
+}
+
+/* ===============================
+   NAVBAR – MOBILE FIX (ALL DEVICES)
+   =============================== */
+
+.navbar {
+  padding: 10px 16px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  max-height: 48px;
+  width: auto;
+}
+
+
+
+/* ===============================
+   CAREERS HERO – RESPONSIVE FIX
+   =============================== */
+
+.page-heading {
+  padding: 230px 0px 150px 0px;
+}
+
+
+.page-heading h1 {
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+
+/* iPhone SE, Galaxy S8+ */
+@media (max-width: 576px) {
+  .page-heading {
+    padding: 90px 15px 70px;
+    min-height: auto;
+  }
+
+  .page-heading h1 {
+    font-size: 28px;
+  }
+
+  .page-heading span {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Galaxy Z Fold (folded) */
+@media (max-width: 390px) {
+  .page-heading h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-logo {
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  .navbar-logo {
+    max-height: 36px;
+  }
+}
+
+

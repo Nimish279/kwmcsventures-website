@@ -1,7 +1,9 @@
 .dropdown-menu {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
 }
 
 @media screen and (min-width: 992px) {
@@ -119,7 +121,7 @@
 
 :root {
   --brand-primary: rgba(81, 66, 250, 0.902); /* Charcoal */
-  --brand-accent: #ffff; /* Gold */
+  --brand-accent: rgba(81, 66, 250, 0.902);/* Gold */
 }
 
 /* Headings & emphasis */
@@ -181,7 +183,9 @@ a.filled-button:hover {
   background-color: #f5f6f8 !important;
 }
 .service-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-item:hover {
@@ -223,75 +227,7 @@ a.filled-button:hover {
     margin-right: auto;
   }
 }
-/* Chatbot */
-#chatbot-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #1c1f26;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 9999;
-}
 
-#chatbot-box {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  width: 280px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  display: none;
-  flex-direction: column;
-  z-index: 9999;
-  font-family: Arial, sans-serif;
-}
-
-#chatbot-header {
-  padding: 10px;
-  background: #1c1f26;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 10px 10px 0 0;
-}
-
-#chatbot-messages {
-  padding: 10px;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.bot {
-  background: #f1f1f1;
-  padding: 8px;
-  border-radius: 6px;
-  margin-bottom: 6px;
-  font-size: 13px;
-}
-
-#chatbot-actions {
-  padding: 10px;
-  border-top: 1px solid #eee;
-}
-
-#chatbot-actions button {
-  width: 100%;
-  margin-bottom: 5px;
-  padding: 6px;
-  border: none;
-  background: #1c1f26;
-  color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#chatbot-close {
-  cursor: pointer;
-}
 /* Our Clients Section */
 .clients-section {
   padding: 70px 20px;
@@ -363,4 +299,102 @@ a.filled-button:hover {
   color: #e0e0e0;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+/* ===== APPLY PAGE STYLES ===== */
+
+.apply-hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("assets/images/slide_01.jpg") center/cover no-repeat;
+  padding: 120px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.apply-hero h1 {
+  font-weight: 700;
+}
+
+.apply-form {
+  margin-top: 0; /* ✅ FIXED */
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.apply-form label {
+  font-weight: 500;
+}
+
+.file-note {
+  font-size: 13px;
+  color: #777;
+  margin-top: 5px;
+}
+/* Hero slider overlay */
+.img-fill {
+  position: relative;
+}
+
+.img-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.text-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  z-index: 999;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+.clients-slider {
+  overflow: hidden;
+  width: 100%;
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollClients 25s linear infinite;
+}
+
+.clients-track img {
+  margin: 0 30px;
+  max-height: 60px;
+  width: auto;
+}
+
+@keyframes scrollClients {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
