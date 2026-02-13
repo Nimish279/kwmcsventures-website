@@ -75,7 +75,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <img src="../assets/images/kwmcslogo.png" height="55" width="300" alt="KWMCS Ventures Logo">
+<img src="../assets/images/kwmcslogo.png" class="site-logo" alt="KWMCS Ventures Logo">
           <!--<a class="navbar-brand" href="index.html"><h2>KWMCS</h2></a>-->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -137,7 +137,7 @@
                       <div class="dropdown-divider"></div>
                       <li><a class="dropdown-item" href="./Finance.html#risk_mitigation">Risk Mitigation</a></li>
                       <div class="dropdown-divider"></div>
-                      <li><a class="dropdown-item" href="./audits.html">Audits</a></l           
+                      <li><a class="dropdown-item" href="./audits.html">Audits</a>       
                     </ul>
                   </div>
                   
@@ -361,35 +361,71 @@
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="../contactus2.php" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                    <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>                    
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+          <!-- ===== FOOTER CONTACT FORM ===== -->
+<div class="col-md-3 footer-item last-item">
+  <h4>Contact Us</h4>
+
+  <div class="contact-form">
+<form id="footer-contact" action="../contactus2.php" method="post">
+      <div class="row">
+
+        <div class="col-lg-12">
+          <fieldset>
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="footer-name"
+              placeholder="Full Name"
+              required
+            >
+          </fieldset>
+        </div>
+
+        <div class="col-lg-12">
+          <fieldset>
+            <input
+              name="email"
+              type="email"
+              class="form-control"
+              id="footer-email"
+              placeholder="E-Mail Address"
+              required
+            >
+          </fieldset>
+        </div>
+
+        <div class="col-lg-12">
+          <fieldset>
+            <textarea
+              name="message"
+              rows="6"
+              class="form-control"
+              id="footer-message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </fieldset>
+        </div>
+
+        <div class="col-lg-12">
+          <fieldset>
+            <button
+              type="submit"
+              id="footer-submit"
+              class="filled-button"
+            >
+              Send Message
+            </button>
+          </fieldset>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>
+<!-- ===== END FOOTER CONTACT FORM ===== -->
+
         </div>
       </div>
     </footer>
@@ -410,32 +446,40 @@
     <script src="../vendor/jquery/jquery.min.js"></script>
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      $(document).ready(function() {
-          $('#contact').submit(function(e) {
-              e.preventDefault();
-              var form = $(this);
-              var formData = form.serialize();
-  
-              $.ajax({
-                  type: 'POST',
-                  url: form.attr('action'),
-                  data: formData,
-                  dataType: 'json',
-                  success: function(response) {
-                      if (response.status === 'success') {
-                          $('#form-submit').after('<p class="success-message">' + response.message + '</p>');
-                      } else {
-                          $('#form-submit').after('<p class="error-message">' + response.message + '</p>');
-                      }
-                  },
-                  error: function(xhr, status, error) {
-                      console.error(xhr.responseText);
-                  }
-              });
-          });
-      });
-  </script>
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const footerForm = document.getElementById("footer-contact");
+  if (!footerForm) return;
+
+  footerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById("footer-submit");
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+
+    fetch(footerForm.action, {
+      method: "POST",
+      body: new FormData(footerForm)
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert("Message sent successfully!");
+      footerForm.reset();
+      console.log("Server response:", data);
+    })
+    .catch(error => {
+      alert("Message could not be sent.");
+      console.error("Error:", error);
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerText = "Send Message";
+    });
+  });
+});
+</script>
+
   
 
     <!-- Additional Scripts -->
@@ -444,16 +488,7 @@
     <script src="../assets/js/slick.js"></script>
     <script src="../assets/js/accordions.js"></script>
 
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
+
 
   </body>
 </html>
