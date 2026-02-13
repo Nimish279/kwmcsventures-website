@@ -398,3 +398,32 @@ a.filled-button:hover {
     transform: translateX(-50%);
   }
 }
+
+/* ===== NAVBAR LOGO SIZE (SAFE INCREASE) ===== */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 72px;        /* ⬅ increased from ~55px */
+  width: auto;
+  max-height: none;
+}
+
+.background-header .navbar-brand img {
+  height: 60px;        /* slightly smaller after scroll */
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .navbar-brand img {
+    height: 52px;
+  }
+}
+.site-logo{
+  height: 70px;   /* adjust 80–100 until it matches your 2nd image */
+  width: auto;
+}
