@@ -62,8 +62,7 @@
 <header class="">
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <img src="assets/images/kwmcslogo.png" height="55" width="300" alt="KWMCS Ventures Logo">
-
+<img src="assets/images/kwmcslogo.png" class="site-logo" alt="KWMCS Ventures Logo">
       <button class="navbar-toggler" type="button" data-toggle="collapse"
         data-target="#navbarResponsive"
         aria-controls="navbarResponsive"
@@ -294,7 +293,7 @@
       <span><i class="fa fa-clock-o"></i> Internship</span>
     </div>
     <p>
-      Ensure products meet quality standards by finding issues before users do.
+      Manage social media content, posting schedules, and audience engagement across platforms.
     </p>
     <!-- START JD -->
   <a href="javascript:void(0)" class="jd-toggle">View More</a>
@@ -364,7 +363,7 @@
           <div class="col-md-3 footer-item last-item">
             <h4>Contact Us</h4>
             <div class="contact-form">
-              <form id="contact footer-contact" action="contactus2.php" method="post">
+           <form id="footer-contact" method="post">
                 <div class="row">
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <fieldset>
@@ -383,8 +382,8 @@
                   </div>
                   <div class="col-lg-12">
                     <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>                    </fieldset>
-                    </fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+</fieldset>
                   </div>
                 </div>
               </form>
@@ -408,6 +407,9 @@
       </div>
     </div>
 
+    <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <script>
   document.querySelectorAll(".jd-toggle").forEach(toggle => {
     toggle.addEventListener("click", function () {
@@ -420,9 +422,31 @@
     });
   });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const footerForm = document.getElementById("footer-contact");
 
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  footerForm.addEventListener("submit", function (e) {
+    e.preventDefault(); // 🚫 STOP REDIRECT
+
+    fetch("contactus2.php", {
+      method: "POST",
+      body: new FormData(footerForm)
+    })
+    .then(response => response.text())
+    .then(() => {
+      alert("Message sent successfully!");
+      footerForm.reset();
+    })
+    .catch(() => {
+      alert("Something went wrong. Please try again.");
+    });
+  });
+});
+</script> 
+
+
+
 <script src="assets/js/custom.js"></script>
 <script src="assets/js/owl.js"></script>
 <script src="assets/js/slick.js"></script>
